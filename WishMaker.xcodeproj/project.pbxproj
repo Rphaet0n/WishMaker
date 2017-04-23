@@ -100,7 +100,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F4DEED621EACE2B100899DE2 /* Build configuration list for PBXProject "Сustomer" */;
+			buildConfigurationList = F4DEED621EACE2B100899DE2 /* Build configuration list for PBXProject "WishMaker" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -281,7 +281,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F4DEED621EACE2B100899DE2 /* Build configuration list for PBXProject "Сustomer" */ = {
+		F4DEED621EACE2B100899DE2 /* Build configuration list for PBXProject "WishMaker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F4DEED771EACE2B100899DE2 /* Debug */,
@@ -297,6 +297,7 @@
 				F4DEED7B1EACE2B100899DE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
