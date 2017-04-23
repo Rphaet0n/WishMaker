@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ABA95EEE1EACE9D7005892EC"
-               BuildableName = "WishMaker.app"
-               BlueprintName = "WishMaker"
-               ReferencedContainer = "container:WishMaker.xcodeproj">
+               BlueprintIdentifier = "F4DEED661EACE2B100899DE2"
+               BuildableName = "&#x421;ustomer.app"
+               BlueprintName = "&#x421;ustomer"
+               ReferencedContainer = "container:&#x421;ustomer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ABA95EEE1EACE9D7005892EC"
-            BuildableName = "WishMaker.app"
-            BlueprintName = "WishMaker"
-            ReferencedContainer = "container:WishMaker.xcodeproj">
+            BlueprintIdentifier = "F4DEED661EACE2B100899DE2"
+            BuildableName = "&#x421;ustomer.app"
+            BlueprintName = "&#x421;ustomer"
+            ReferencedContainer = "container:&#x421;ustomer.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ABA95EEE1EACE9D7005892EC"
-            BuildableName = "WishMaker.app"
-            BlueprintName = "WishMaker"
-            ReferencedContainer = "container:WishMaker.xcodeproj">
+            BlueprintIdentifier = "F4DEED661EACE2B100899DE2"
+            BuildableName = "&#x421;ustomer.app"
+            BlueprintName = "&#x421;ustomer"
+            ReferencedContainer = "container:&#x421;ustomer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ABA95EEE1EACE9D7005892EC"
-            BuildableName = "WishMaker.app"
-            BlueprintName = "WishMaker"
-            ReferencedContainer = "container:WishMaker.xcodeproj">
+            BlueprintIdentifier = "F4DEED661EACE2B100899DE2"
+            BuildableName = "&#x421;ustomer.app"
+            BlueprintName = "&#x421;ustomer"
+            ReferencedContainer = "container:&#x421;ustomer.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
