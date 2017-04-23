@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cqm-YB-SiM">
-    <device id="retina4_7" orientation="landscape">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -35,7 +35,7 @@
                         <viewControllerLayoutGuide type="bottom" id="KRP-lw-R2D"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4hH-fe-UPq">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" borderStyle="roundedRect" placeholder="Login" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZuX-X5-KCG">
@@ -78,44 +78,44 @@
         <!--Registration-->
         <scene sceneID="9qp-BW-rch">
             <objects>
-                <viewController title="Registration" id="6uu-u9-Ypj" customClass="ViewController" customModule="Сustomer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Registration" id="6uu-u9-Ypj" customClass="ViewController" customModule="WishMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gfH-7I-jMA"/>
                         <viewControllerLayoutGuide type="bottom" id="3Jl-qz-fTq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Wid-hN-UUE">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="redraw" misplaced="YES" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9Fe-me-b1d">
-                                <rect key="frame" x="80" y="100" width="527" height="160"/>
+                                <rect key="frame" x="80" y="100" width="274" height="160"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wtq-sc-T8B">
-                                        <rect key="frame" x="0.0" y="0.0" width="527" height="110"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="274" height="110"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" borderStyle="roundedRect" placeholder="Login" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1rJ-fK-eMQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="527" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="274" height="30"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <attributedString key="attributedText"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" borderStyle="roundedRect" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fvv-Vz-cyw">
-                                                <rect key="frame" x="0.0" y="40" width="527" height="30"/>
+                                                <rect key="frame" x="0.0" y="40" width="274" height="30"/>
                                                 <attributedString key="attributedText"/>
                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" borderStyle="roundedRect" placeholder="Confirm password" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9Sr-tN-G2p">
-                                                <rect key="frame" x="0.0" y="80" width="527" height="30"/>
+                                                <rect key="frame" x="0.0" y="80" width="274" height="30"/>
                                                 <attributedString key="attributedText"/>
                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2NM-TZ-RD7">
-                                        <rect key="frame" x="0.0" y="130" width="527" height="30"/>
+                                        <rect key="frame" x="0.0" y="130" width="274" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9eI-on-Ab8">
-                                                <rect key="frame" x="0.0" y="0.0" width="527" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="274" height="30"/>
                                                 <state key="normal" title="Sign Up"/>
                                                 <connections>
                                                     <segue destination="onF-de-bar" kind="show" id="Jl7-et-F0s"/>
@@ -131,7 +131,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="9Fe-me-b1d" secondAttribute="trailing" constant="50" id="DBl-Js-XHT"/>
                             <constraint firstItem="9Fe-me-b1d" firstAttribute="leading" secondItem="Wid-hN-UUE" secondAttribute="leadingMargin" constant="50" id="fdZ-ST-XA2"/>
                             <constraint firstItem="9Fe-me-b1d" firstAttribute="centerX" secondItem="Wid-hN-UUE" secondAttribute="centerX" id="thx-Ez-qPV"/>
-                            <constraint firstItem="9Fe-me-b1d" firstAttribute="top" secondItem="gfH-7I-jMA" secondAttribute="bottom" constant="25" id="x9F-Gs-U6l"/>
+                            <constraint firstItem="9Fe-me-b1d" firstAttribute="top" secondItem="gfH-7I-jMA" secondAttribute="bottom" constant="77" id="x9F-Gs-U6l"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -142,13 +142,13 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Сustomer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WishMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -173,7 +173,7 @@
                         <viewControllerLayoutGuide type="bottom" id="AhM-zR-9j8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wqj-AA-6cZ">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

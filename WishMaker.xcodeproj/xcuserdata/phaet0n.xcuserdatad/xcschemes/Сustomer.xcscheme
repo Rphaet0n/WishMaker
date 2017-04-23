@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F4DEED661EACE2B100899DE2"
-               BuildableName = "&#x421;ustomer.app"
-               BlueprintName = "&#x421;ustomer"
+               BuildableName = "WishMaker.app"
+               BlueprintName = "WishMaker"
                ReferencedContainer = "container:WishMaker.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F4DEED661EACE2B100899DE2"
-            BuildableName = "&#x421;ustomer.app"
-            BlueprintName = "&#x421;ustomer"
+            BuildableName = "WishMaker.app"
+            BlueprintName = "WishMaker"
             ReferencedContainer = "container:WishMaker.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -56,8 +56,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F4DEED661EACE2B100899DE2"
-            BuildableName = "&#x421;ustomer.app"
-            BlueprintName = "&#x421;ustomer"
+            BuildableName = "WishMaker.app"
+            BlueprintName = "WishMaker"
             ReferencedContainer = "container:WishMaker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -75,8 +75,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F4DEED661EACE2B100899DE2"
-            BuildableName = "&#x421;ustomer.app"
-            BlueprintName = "&#x421;ustomer"
+            BuildableName = "WishMaker.app"
+            BlueprintName = "WishMaker"
             ReferencedContainer = "container:WishMaker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

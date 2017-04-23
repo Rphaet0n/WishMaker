@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F4DEED671EACE2B100899DE2 /* Сustomer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Сustomer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4DEED671EACE2B100899DE2 /* WishMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WishMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4DEED6A1EACE2B100899DE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4DEED6C1EACE2B100899DE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F4DEED6F1EACE2B100899DE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -38,7 +38,7 @@
 		F4DEED5E1EACE2B100899DE2 = {
 			isa = PBXGroup;
 			children = (
-				F4DEED691EACE2B100899DE2 /* Сustomer */,
+				F4DEED691EACE2B100899DE2 /* WishMaker */,
 				F4DEED681EACE2B100899DE2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,12 +46,12 @@
 		F4DEED681EACE2B100899DE2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F4DEED671EACE2B100899DE2 /* Сustomer.app */,
+				F4DEED671EACE2B100899DE2 /* WishMaker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F4DEED691EACE2B100899DE2 /* Сustomer */ = {
+		F4DEED691EACE2B100899DE2 /* WishMaker */ = {
 			isa = PBXGroup;
 			children = (
 				F4DEED6A1EACE2B100899DE2 /* AppDelegate.swift */,
@@ -61,15 +61,16 @@
 				F4DEED731EACE2B100899DE2 /* LaunchScreen.storyboard */,
 				F4DEED761EACE2B100899DE2 /* Info.plist */,
 			);
+			name = WishMaker;
 			path = "Сustomer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F4DEED661EACE2B100899DE2 /* Сustomer */ = {
+		F4DEED661EACE2B100899DE2 /* WishMaker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F4DEED791EACE2B100899DE2 /* Build configuration list for PBXNativeTarget "Сustomer" */;
+			buildConfigurationList = F4DEED791EACE2B100899DE2 /* Build configuration list for PBXNativeTarget "WishMaker" */;
 			buildPhases = (
 				F4DEED631EACE2B100899DE2 /* Sources */,
 				F4DEED641EACE2B100899DE2 /* Frameworks */,
@@ -79,9 +80,9 @@
 			);
 			dependencies = (
 			);
-			name = "Сustomer";
+			name = WishMaker;
 			productName = "Сustomer";
-			productReference = F4DEED671EACE2B100899DE2 /* Сustomer.app */;
+			productReference = F4DEED671EACE2B100899DE2 /* WishMaker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -113,7 +114,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F4DEED661EACE2B100899DE2 /* Сustomer */,
+				F4DEED661EACE2B100899DE2 /* WishMaker */,
 			);
 		};
 /* End PBXProject section */
@@ -263,6 +264,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.sfedu.-ustomer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -275,6 +277,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.sfedu.-ustomer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -290,7 +293,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F4DEED791EACE2B100899DE2 /* Build configuration list for PBXNativeTarget "Сustomer" */ = {
+		F4DEED791EACE2B100899DE2 /* Build configuration list for PBXNativeTarget "WishMaker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F4DEED7A1EACE2B100899DE2 /* Debug */,
