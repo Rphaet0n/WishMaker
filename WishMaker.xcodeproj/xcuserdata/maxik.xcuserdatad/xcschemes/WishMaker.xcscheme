@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F4DEED661EACE2B100899DE2"
-               BuildableName = "&#x421;ustomer.app"
-               BlueprintName = "&#x421;ustomer"
-               ReferencedContainer = "container:&#x421;ustomer.xcodeproj">
+               BuildableName = "WishMaker.app"
+               BlueprintName = "WishMaker"
+               ReferencedContainer = "container:WishMaker.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F4DEED661EACE2B100899DE2"
-            BuildableName = "&#x421;ustomer.app"
-            BlueprintName = "&#x421;ustomer"
-            ReferencedContainer = "container:&#x421;ustomer.xcodeproj">
+            BuildableName = "WishMaker.app"
+            BlueprintName = "WishMaker"
+            ReferencedContainer = "container:WishMaker.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F4DEED661EACE2B100899DE2"
-            BuildableName = "&#x421;ustomer.app"
-            BlueprintName = "&#x421;ustomer"
-            ReferencedContainer = "container:&#x421;ustomer.xcodeproj">
+            BuildableName = "WishMaker.app"
+            BlueprintName = "WishMaker"
+            ReferencedContainer = "container:WishMaker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F4DEED661EACE2B100899DE2"
-            BuildableName = "&#x421;ustomer.app"
-            BlueprintName = "&#x421;ustomer"
-            ReferencedContainer = "container:&#x421;ustomer.xcodeproj">
+            BuildableName = "WishMaker.app"
+            BlueprintName = "WishMaker"
+            ReferencedContainer = "container:WishMaker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
