@@ -8,9 +8,7 @@
 
 import UIKit
 
-class RegistrationController: UIViewController {
-    
-    @IBOutlet weak var phoneTextField: MaskField!
+class SearchController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,5 +20,5 @@ class RegistrationController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
 }
-
