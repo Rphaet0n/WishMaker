@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FF0B2591EBA25A100EDDFCB /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF0B2571EBA25A100EDDFCB /* OrderModel.swift */; };
+		3FF0B25A1EBA25A100EDDFCB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF0B2581EBA25A100EDDFCB /* UserModel.swift */; };
 		F41660721EB0E0FB008EC75D /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41660711EB0E0FB008EC75D /* RegistrationController.swift */; };
 		F41660741EB0E187008EC75D /* AuthorizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41660731EB0E187008EC75D /* AuthorizationController.swift */; };
 		F41660771EB0E21A008EC75D /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41660761EB0E21A008EC75D /* ProfileController.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3FF0B2571EBA25A100EDDFCB /* OrderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
+		3FF0B2581EBA25A100EDDFCB /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		F41660711EB0E0FB008EC75D /* RegistrationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		F41660731EB0E187008EC75D /* AuthorizationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationController.swift; sourceTree = "<group>"; };
 		F41660761EB0E21A008EC75D /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
@@ -62,6 +66,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FF0B2521EBA253600EDDFCB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3FF0B2571EBA25A100EDDFCB /* OrderModel.swift */,
+				3FF0B2581EBA25A100EDDFCB /* UserModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		F41660751EB0E1B2008EC75D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +122,7 @@
 		F4DEED691EACE2B100899DE2 /* WishMaker */ = {
 			isa = PBXGroup;
 			children = (
+				3FF0B2521EBA253600EDDFCB /* Models */,
 				F4D12A9B1EB6854000B549BF /* PhoneTextField */,
 				F41660751EB0E1B2008EC75D /* Controllers */,
 				F4DEED6A1EACE2B100899DE2 /* AppDelegate.swift */,
@@ -202,6 +216,8 @@
 				F4D12A9D1EB6857400B549BF /* MaskField.swift in Sources */,
 				F42A08E91EB68946009A5714 /* MaskFieldPatternCharacter.swift in Sources */,
 				F4DEED6D1EACE2B100899DE2 /* ViewController.swift in Sources */,
+				3FF0B25A1EBA25A100EDDFCB /* UserModel.swift in Sources */,
+				3FF0B2591EBA25A100EDDFCB /* OrderModel.swift in Sources */,
 				F41660741EB0E187008EC75D /* AuthorizationController.swift in Sources */,
 				F41660721EB0E0FB008EC75D /* RegistrationController.swift in Sources */,
 				F42A08EB1EB68978009A5714 /* MaskFieldStatus.swift in Sources */,
