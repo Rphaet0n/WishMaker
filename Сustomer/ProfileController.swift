@@ -11,6 +11,9 @@ import UIKit
 class ProfileController: UIViewController,
     UIImagePickerControllerDelegate,
 UINavigationControllerDelegate {
+    
+    
+    
     @IBOutlet weak var avatarView: UIImageView!
     
     @IBAction func photoFromLibrary(_ sender: UIBarButtonItem) {

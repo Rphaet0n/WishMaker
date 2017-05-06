@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3FF0B2591EBA25A100EDDFCB /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF0B2571EBA25A100EDDFCB /* OrderModel.swift */; };
 		3FF0B25A1EBA25A100EDDFCB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF0B2581EBA25A100EDDFCB /* UserModel.swift */; };
+		F410F8701EBE137E0066487B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F410F86F1EBE137E0066487B /* Item.swift */; };
+		F410F8721EBE17170066487B /* OrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F410F8711EBE17170066487B /* OrderController.swift */; };
+		F410F8781EBE22AE0066487B /* WorkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F410F8771EBE22AE0066487B /* WorkController.swift */; };
 		F41660721EB0E0FB008EC75D /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41660711EB0E0FB008EC75D /* RegistrationController.swift */; };
 		F41660741EB0E187008EC75D /* AuthorizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41660731EB0E187008EC75D /* AuthorizationController.swift */; };
 		F41660771EB0E21A008EC75D /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41660761EB0E21A008EC75D /* ProfileController.swift */; };
@@ -32,6 +35,9 @@
 /* Begin PBXFileReference section */
 		3FF0B2571EBA25A100EDDFCB /* OrderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		3FF0B2581EBA25A100EDDFCB /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		F410F86F1EBE137E0066487B /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		F410F8711EBE17170066487B /* OrderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderController.swift; sourceTree = "<group>"; };
+		F410F8771EBE22AE0066487B /* WorkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkController.swift; sourceTree = "<group>"; };
 		F41660711EB0E0FB008EC75D /* RegistrationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		F41660731EB0E187008EC75D /* AuthorizationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationController.swift; sourceTree = "<group>"; };
 		F41660761EB0E21A008EC75D /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
@@ -75,6 +81,14 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		F410F86E1EBE13610066487B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F410F86F1EBE137E0066487B /* Item.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		F41660751EB0E1B2008EC75D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +97,8 @@
 				F41660761EB0E21A008EC75D /* ProfileController.swift */,
 				F4D12A951EB6747300B549BF /* SearchController.swift */,
 				F42A08EE1EB693C7009A5714 /* ItemController.swift */,
+				F410F8711EBE17170066487B /* OrderController.swift */,
+				F410F8771EBE22AE0066487B /* WorkController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -122,6 +138,7 @@
 		F4DEED691EACE2B100899DE2 /* WishMaker */ = {
 			isa = PBXGroup;
 			children = (
+				F410F86E1EBE13610066487B /* Classes */,
 				3FF0B2521EBA253600EDDFCB /* Models */,
 				F4D12A9B1EB6854000B549BF /* PhoneTextField */,
 				F41660751EB0E1B2008EC75D /* Controllers */,
@@ -208,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F410F8721EBE17170066487B /* OrderController.swift in Sources */,
 				F4D12A9F1EB6866900B549BF /* MaskFieldBlock.swift in Sources */,
 				F42A08ED1EB689A9009A5714 /* MaskFieldUtility.swift in Sources */,
 				F42A08E51EB688C8009A5714 /* MaskFieldBrackets.swift in Sources */,
@@ -218,12 +236,14 @@
 				F4DEED6D1EACE2B100899DE2 /* ViewController.swift in Sources */,
 				3FF0B25A1EBA25A100EDDFCB /* UserModel.swift in Sources */,
 				3FF0B2591EBA25A100EDDFCB /* OrderModel.swift in Sources */,
+				F410F8701EBE137E0066487B /* Item.swift in Sources */,
 				F41660741EB0E187008EC75D /* AuthorizationController.swift in Sources */,
 				F41660721EB0E0FB008EC75D /* RegistrationController.swift in Sources */,
 				F42A08EB1EB68978009A5714 /* MaskFieldStatus.swift in Sources */,
 				F4DEED6B1EACE2B100899DE2 /* AppDelegate.swift in Sources */,
 				F42A08E71EB688FF009A5714 /* MaskFieldEvent.swift in Sources */,
 				F42A08EF1EB693C7009A5714 /* ItemController.swift in Sources */,
+				F410F8781EBE22AE0066487B /* WorkController.swift in Sources */,
 				F4D12AA21EB6870D00B549BF /* MaskFieldBlockCharacter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

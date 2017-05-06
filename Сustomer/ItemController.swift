@@ -10,15 +10,24 @@ import UIKit
 
 class ItemController: UIViewController {
 
+    @IBOutlet weak var Iname: UITextField!
+    @IBOutlet weak var Icount: UITextField!
+    @IBOutlet weak var IDestination: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func addButton(_ sender: UIButton) {
+        var it = Item(Iname: Iname.text!, Icount: Int(Icount.text!)!, Iaddress: IDestination.text!, Iprice: 100)
+        
     }
     
 
