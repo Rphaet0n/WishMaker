@@ -14,6 +14,8 @@ class ItemController: UIViewController {
     @IBOutlet weak var Icount: UITextField!
     @IBOutlet weak var IDestination: UITextField!
     
+    public static var var1 = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,10 +26,6 @@ class ItemController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    @IBAction func addButton(_ sender: UIButton) {
-        var it = Item(Iname: Iname.text!, Icount: Int(Icount.text!)!, Iaddress: IDestination.text!, Iprice: 100)
-        
     }
     
 
