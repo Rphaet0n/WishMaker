@@ -8,38 +8,43 @@
 
 import UIKit
 
-class OrderController: UIViewController {
+class OrderController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var myOrders: UITableView!
+    var orders: Array<Order> = []
     
-    var array = ["1","2","3"]
-    
-    func addNew(item: Item){
+    // For Ardashes
+    func loadMyOrders () -> Array<Order> {
+        var myOrdersArray = Array<Order>()
         
+        return myOrdersArray
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        self.orders = loadMyOrders()
+        self.myOrders.reloadData()
     }
-
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return orders.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.myOrders.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyOrdersViewCell
+        
+        cell.itemname.text = self.orders[indexPath.row].item.title
+        cell.checking.isEnabled = self.orders[indexPath.row].IsEnabled()
+        
+        return cell
+    }    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    
-    
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return array.count
     }
     
 
