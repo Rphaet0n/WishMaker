@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		347B5D0E084EC544F7CF747C /* Pods_WishMaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8384A466DFB2BF1DCDC635 /* Pods_WishMaker.framework */; };
 		3FF0B2591EBA25A100EDDFCB /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF0B2571EBA25A100EDDFCB /* OrderModel.swift */; };
 		3FF0B25A1EBA25A100EDDFCB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF0B2581EBA25A100EDDFCB /* UserModel.swift */; };
+		ABD89ECA1EBF3CEB009C4061 /* AlertsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD89EC91EBF3CEB009C4061 /* AlertsFile.swift */; };
 		F410F8701EBE137E0066487B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F410F86F1EBE137E0066487B /* Item.swift */; };
 		F410F8721EBE17170066487B /* OrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F410F8711EBE17170066487B /* OrderController.swift */; };
 		F410F8781EBE22AE0066487B /* WorkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F410F8771EBE22AE0066487B /* WorkController.swift */; };
@@ -35,6 +37,10 @@
 /* Begin PBXFileReference section */
 		3FF0B2571EBA25A100EDDFCB /* OrderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		3FF0B2581EBA25A100EDDFCB /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		5C67C3B6536EEFAE57B4B2BA /* Pods-WishMaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WishMaker.release.xcconfig"; path = "Pods/Target Support Files/Pods-WishMaker/Pods-WishMaker.release.xcconfig"; sourceTree = "<group>"; };
+		7C8384A466DFB2BF1DCDC635 /* Pods_WishMaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WishMaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABD89EC91EBF3CEB009C4061 /* AlertsFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertsFile.swift; sourceTree = "<group>"; };
+		AC29EDD8DA5C69581103D15F /* Pods-WishMaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WishMaker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WishMaker/Pods-WishMaker.debug.xcconfig"; sourceTree = "<group>"; };
 		F410F86F1EBE137E0066487B /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		F410F8711EBE17170066487B /* OrderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderController.swift; sourceTree = "<group>"; };
 		F410F8771EBE22AE0066487B /* WorkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkController.swift; sourceTree = "<group>"; };
@@ -66,12 +72,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				347B5D0E084EC544F7CF747C /* Pods_WishMaker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2154788F9A3B78F1A7BD1870 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C8384A466DFB2BF1DCDC635 /* Pods_WishMaker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3FF0B2521EBA253600EDDFCB /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,10 +96,20 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		8D5AB56B633803D4645F807E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AC29EDD8DA5C69581103D15F /* Pods-WishMaker.debug.xcconfig */,
+				5C67C3B6536EEFAE57B4B2BA /* Pods-WishMaker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F410F86E1EBE13610066487B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				F410F86F1EBE137E0066487B /* Item.swift */,
+				ABD89EC91EBF3CEB009C4061 /* AlertsFile.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -124,6 +149,8 @@
 			children = (
 				F4DEED691EACE2B100899DE2 /* WishMaker */,
 				F4DEED681EACE2B100899DE2 /* Products */,
+				8D5AB56B633803D4645F807E /* Pods */,
+				2154788F9A3B78F1A7BD1870 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,9 +187,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4DEED791EACE2B100899DE2 /* Build configuration list for PBXNativeTarget "WishMaker" */;
 			buildPhases = (
+				D274471CB377E91D1D20DD44 /* [CP] Check Pods Manifest.lock */,
 				F4DEED631EACE2B100899DE2 /* Sources */,
 				F4DEED641EACE2B100899DE2 /* Frameworks */,
 				F4DEED651EACE2B100899DE2 /* Resources */,
+				5A03E09CD6848BB3E5BB2288 /* [CP] Embed Pods Frameworks */,
+				036957C0D81226053E588CC6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,6 +250,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		036957C0D81226053E588CC6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WishMaker/Pods-WishMaker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A03E09CD6848BB3E5BB2288 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WishMaker/Pods-WishMaker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D274471CB377E91D1D20DD44 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F4DEED631EACE2B100899DE2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -233,6 +311,7 @@
 				F4D12A961EB6747300B549BF /* SearchController.swift in Sources */,
 				F4D12A9D1EB6857400B549BF /* MaskField.swift in Sources */,
 				F42A08E91EB68946009A5714 /* MaskFieldPatternCharacter.swift in Sources */,
+				ABD89ECA1EBF3CEB009C4061 /* AlertsFile.swift in Sources */,
 				F4DEED6D1EACE2B100899DE2 /* ViewController.swift in Sources */,
 				3FF0B25A1EBA25A100EDDFCB /* UserModel.swift in Sources */,
 				3FF0B2591EBA25A100EDDFCB /* OrderModel.swift in Sources */,
@@ -363,6 +442,7 @@
 		};
 		F4DEED7A1EACE2B100899DE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC29EDD8DA5C69581103D15F /* Pods-WishMaker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Сustomer/Info.plist";
@@ -377,6 +457,7 @@
 		};
 		F4DEED7B1EACE2B100899DE2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C67C3B6536EEFAE57B4B2BA /* Pods-WishMaker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Сustomer/Info.plist";

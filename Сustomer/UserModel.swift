@@ -11,7 +11,7 @@ import UIKit
 
 
 class UserModel: NSObject {
-    
+  
     //properties
     var idUser: Int?
     var fullName: String?
