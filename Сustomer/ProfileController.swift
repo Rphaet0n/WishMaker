@@ -46,7 +46,6 @@ UINavigationControllerDelegate {
     }
     
     
-    @IBOutlet weak var avatarView: UIImageView!
     
    /* @IBAction func photoFromLibrary(_ sender: UIBarButtonItem) {
         picker.allowsEditing = false
@@ -88,24 +87,30 @@ UINavigationControllerDelegate {
     
     var picker = UIImagePickerController()
     
+    @IBOutlet weak var avatarView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         picker.delegate = self
     }
     
-    private func imagePickerController(_ picker: UIImagePickerController,
-                               didFinishPickingMediaWithInfo info: [String : AnyObject])
-    {
-        let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
-        avatarView.contentMode = .scaleAspectFit //3
-        avatarView.image = chosenImage //4
-        dismiss(animated:true, completion: nil) //5
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let chosenImage = info[UIImagePickerControllerEditedImage] as? UIImage { //2
+            avatarView.contentMode = .scaleAspectFit //3
+            avatarView.image = chosenImage //4
+        }
+        else if let chosenImage = info[UIImagePickerControllerOriginalImage] as? UIImage { //2
+            avatarView.contentMode = .scaleAspectFit //3
+            avatarView.image = chosenImage
+        } else {
+            print("Something went wrong")
+        }
+        self.dismiss(animated: true, completion: nil)
     }
+
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        
+        dismiss(animated: true, completion: nil)
     }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
