@@ -19,6 +19,13 @@ class AutorizationController: UIViewController {
   var uid: Int?
   var username: String?
   
+  func saveAppData() {
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    appDelegate.authToken = self.token!
+    appDelegate.userName = self.username!
+    appDelegate.myId = self.uid!
+  }
+  
   func loadData(){
     // login/pass
     let params: Parameters = [
@@ -47,6 +54,7 @@ class AutorizationController: UIViewController {
         self.loadID()
     }
   }
+  
   func loadID() {
     //Getting user_id
     let params: Parameters = [
@@ -79,10 +87,7 @@ class AutorizationController: UIViewController {
       ShowAlert.notifyUser("Error", message: "Sync error, learn about concurrency, bro!", controller: self)
       return
     }
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    appDelegate.authToken = self.token!
-    appDelegate.userName = self.username!
-    appDelegate.myId = self.uid!
+    saveAppData()
     
     //save token
     let defaults = UserDefaults.standard
@@ -109,13 +114,21 @@ class AutorizationController: UIViewController {
     
     let defaults = UserDefaults.standard
     guard let token = defaults.string(forKey: "authToken"),
-      let uid = defaults.string(forKey: "myId"),
-      let userName = defaults.string(forKey: "username") else {
+      let suid = defaults.string(forKey: "myId"),
+      let uid = Int(suid),
+      let username = defaults.string(forKey: "username") else {
         debugPrint("No stored config found!")
         return
     }
     let tokenIsValid = AuthHelper.isTokenValid(token, controller: self)
     debugPrint("Token is valid \(tokenIsValid) !")
+    if tokenIsValid {
+      self.token = token
+      self.uid = uid
+      self.username = username
+      saveAppData()
+      self.performSegue(withIdentifier: "singInSegue", sender: self)
+    }
     
   }
   

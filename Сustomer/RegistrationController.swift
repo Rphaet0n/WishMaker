@@ -20,6 +20,8 @@ class RegistrationController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
+    passField.isSecureTextEntry = true
+    confirmField.isSecureTextEntry = true
   }
   
   override func didReceiveMemoryWarning() {
@@ -38,5 +40,6 @@ class RegistrationController: UIViewController {
       ShowAlert.notifyUser("Error", message: "Confrimation and password aren't same!", controller: self)
       return
     }
+    
   }
 }

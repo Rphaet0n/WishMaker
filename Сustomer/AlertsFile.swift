@@ -86,7 +86,7 @@ public class AuthHelper {
     let headers: HTTPHeaders = [
       "Authorization": token]
     
-    Alamofire.request("\(URLs.host)order_infos", method: .get, parameters: nil, headers: headers)
+    Alamofire.request("\(URLs.host)categories", method: .get, parameters: nil, headers: headers)
       .responseJSON { response in
         debugPrint("answer####: \(response) ####end answer")
         let statusCode: Int? = response.response?.statusCode
@@ -103,7 +103,7 @@ public class AuthHelper {
         result = true
         semaphore.signal()
     }
-    semaphore.wait(timeout: .now() + 5.0)
+    semaphore.wait(timeout: .now() + 30.0)
     return result
   }
 }
