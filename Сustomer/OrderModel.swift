@@ -23,6 +23,7 @@ class OrderModel: NSObject {
     var images: [UIImage] = []
     var startDate: Date?
     var endDate: Date?
+    var idExecutor: Int?
     
     //empty constructor
     override init()
@@ -44,4 +45,17 @@ class OrderModel: NSObject {
         
     }
     
-}
+    //is used
+    func IsEnabled() -> Bool{
+        if self.idExecutor == nil {
+            return false
+        }
+        else {
+            return true
+        }
+    }
+    
+    //get executor
+    func getWorker (_ idExecutor:Int) {
+        self.idExecutor = idExecutor
+    }}

@@ -13,8 +13,6 @@ UINavigationControllerDelegate {
     
     @IBAction func tapTap(_ sender: UITapGestureRecognizer) {
         
-        print("asdasdadad")
-        
         let alert = UIAlertController(title: "Choose", message: "asdsd", preferredStyle: .alert)
         
         let libraryAction = UIAlertAction(title: "Library", style: .default, handler: {action in
@@ -23,6 +21,7 @@ UINavigationControllerDelegate {
             self.picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
             self.picker.modalPresentationStyle = .popover
             self.present(self.picker, animated: true, completion: nil)
+            
         })
         
         let getPhotoAction = UIAlertAction(title: "Photo", style: .default, handler: { action in
@@ -95,7 +94,7 @@ UINavigationControllerDelegate {
         picker.delegate = self
     }
     
-    func imagePickerController(_ picker: UIImagePickerController,
+    private func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String : AnyObject])
     {
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2

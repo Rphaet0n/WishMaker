@@ -82,7 +82,7 @@ public class AuthHelper {
   {
     let semaphore = DispatchSemaphore(value: 0)
     var result = false
-    let params: Parameters = ["Accept":"application/json"]
+    let _: Parameters = ["Accept":"application/json"]
     let headers: HTTPHeaders = [
       "Authorization": token]
     
