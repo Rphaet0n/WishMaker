@@ -26,6 +26,7 @@
 		F44105591EC104A400A8C8D9 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44105581EC104A400A8C8D9 /* SearchTableViewCell.swift */; };
 		F441055B1EC1072700A8C8D9 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F441055A1EC1072700A8C8D9 /* SearchTableViewController.swift */; };
 		F441055D1EC1097800A8C8D9 /* CustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F441055C1EC1097800A8C8D9 /* CustomerViewController.swift */; };
+		F4742B401EC113D900E3EB0D /* AllButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4742B3F1EC113D900E3EB0D /* AllButtons.swift */; };
 		F4D12A9D1EB6857400B549BF /* MaskField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D12A9C1EB6857400B549BF /* MaskField.swift */; };
 		F4D12A9F1EB6866900B549BF /* MaskFieldBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D12A9E1EB6866900B549BF /* MaskFieldBlock.swift */; };
 		F4D12AA21EB6870D00B549BF /* MaskFieldBlockCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D12AA11EB6870D00B549BF /* MaskFieldBlockCharacter.swift */; };
@@ -58,6 +59,7 @@
 		F44105581EC104A400A8C8D9 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchTableViewCell.swift; path = "Сustomer/SearchTableViewCell.swift"; sourceTree = "<group>"; };
 		F441055A1EC1072700A8C8D9 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchTableViewController.swift; path = "Сustomer/SearchTableViewController.swift"; sourceTree = "<group>"; };
 		F441055C1EC1097800A8C8D9 /* CustomerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerViewController.swift; sourceTree = "<group>"; };
+		F4742B3F1EC113D900E3EB0D /* AllButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllButtons.swift; sourceTree = "<group>"; };
 		F4D12A9C1EB6857400B549BF /* MaskField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskField.swift; sourceTree = "<group>"; };
 		F4D12A9E1EB6866900B549BF /* MaskFieldBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskFieldBlock.swift; sourceTree = "<group>"; };
 		F4D12AA01EB686C900B549BF /* MaskField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskField.h; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				F4F70FC31EC0C1F5005D3CF2 /* wareaglei.ttf */,
+				F4742B3F1EC113D900E3EB0D /* AllButtons.swift */,
 			);
 			name = "Support Files";
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				F42A08EF1EB693C7009A5714 /* ItemController.swift in Sources */,
 				F4D12AA21EB6870D00B549BF /* MaskFieldBlockCharacter.swift in Sources */,
 				F44105571EC1047200A8C8D9 /* MyOrderTableViewController.swift in Sources */,
+				F4742B401EC113D900E3EB0D /* AllButtons.swift in Sources */,
 				F401349C1EBF6FDD00799C26 /* MyOrdersViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

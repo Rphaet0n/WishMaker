@@ -46,29 +46,6 @@ UINavigationControllerDelegate {
     }
     
     
-    
-   /* @IBAction func photoFromLibrary(_ sender: UIBarButtonItem) {
-        picker.allowsEditing = false
-        picker.sourceType = .photoLibrary
-        picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
-        picker.modalPresentationStyle = .popover
-        present(picker, animated: true, completion: nil)
-        picker.popoverPresentationController?.barButtonItem = sender
-    }
-    
-    
-    @IBAction func shootPhoto(_ sender: UIButton) {
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            picker.allowsEditing = false
-            picker.sourceType = UIImagePickerControllerSourceType.camera
-            picker.cameraCaptureMode = .photo
-            picker.modalPresentationStyle = .fullScreen
-            present(picker,animated: true,completion: nil)
-        } else {
-            noCamera()
-        }
-    }*/
-    
     func noCamera(){
         let alertVC = UIAlertController(
             title: "No Camera",
