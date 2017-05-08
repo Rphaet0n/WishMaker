@@ -6,7 +6,8 @@
 //  Copyright © 2017 Company. All rights reserved.
 //
 import UIKit
-
+import Alamofire
+import SwiftyJSON
 /*
  Alamofire.request("https://httpbin.org/get")
  .validate(statusCode: 200..<300)
@@ -71,4 +72,40 @@ public class ShowAlert {
     controller.present(alertController, animated: true, completion: nil)
   }
 }
+
+public class URLs {
+  public static let host = "http://wishmaker.ddns.net:3000/"
+}
+
+public class AuthHelper {
+  public static func isTokenValid(_ token: String, controller: UIViewController) -> Bool
+  {
+    let semaphore = DispatchSemaphore(value: 0)
+    var result = false
+    let params: Parameters = ["Accept":"application/json"]
+    let headers: HTTPHeaders = [
+      "Authorization": token]
+    
+    Alamofire.request("\(URLs.host)order_infos", method: .get, parameters: nil, headers: headers)
+      .responseJSON { response in
+        debugPrint("answer####: \(response) ####end answer")
+        let statusCode: Int? = response.response?.statusCode
+        guard response.result.isSuccess, statusCode == 200 else {
+          if (statusCode != nil){
+            ShowAlert.notifyUser("Error", message: "Token check eroor", controller: controller)
+            print("Status code: \(statusCode) \nError while fetching remote rooms: \(response.result.error)")
+          }else{
+            ShowAlert.notifyUser("Connection error", message: "Server down or internet connection is bad", controller: controller)
+          }
+          semaphore.signal()
+          return
+        }
+        result = true
+        semaphore.signal()
+    }
+    semaphore.wait(timeout: .now() + 5.0)
+    return result
+  }
+}
+
 

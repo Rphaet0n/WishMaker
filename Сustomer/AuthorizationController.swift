@@ -18,7 +18,7 @@ class AutorizationController: UIViewController {
   var token: String?
   var uid: Int?
   var username: String?
-
+  
   func loadData(){
     // login/pass
     let params: Parameters = [
@@ -26,7 +26,7 @@ class AutorizationController: UIViewController {
       "pass": passField.text!
     ]
     let headers: HTTPHeaders = ["Content-Type":"application/json"]
-    Alamofire.request("http://0.0.0.0:3000/rpc/login", method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
+    Alamofire.request("\(URLs.host)rpc/login", method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
       .responseJSON { response in
         debugPrint("answer####: \(response) ####end answer")
         let statusCode: Int? = response.response?.statusCode
@@ -38,7 +38,7 @@ class AutorizationController: UIViewController {
             }
             
           } else{
-             ShowAlert.notifyUser("Connection error", message: "Server down or internet connection is bad", controller: self)
+            ShowAlert.notifyUser("Connection error", message: "Server down or internet connection is bad", controller: self)
           }
           return
         }
@@ -53,7 +53,7 @@ class AutorizationController: UIViewController {
       "username": self.username!
     ]
     let headers: HTTPHeaders = ["Content-Type":"application/json"]
-    Alamofire.request(URL(string: "http://0.0.0.0:3000/rpc/get_id")!, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
+    Alamofire.request(URL(string: "\(URLs.host)rpc/get_id")!, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
       .responseJSON { response in
         debugPrint("answer####: \(response) ####end answer")
         let statusCode: Int? = response.response?.statusCode
@@ -76,17 +76,21 @@ class AutorizationController: UIViewController {
   
   func signIn () {
     guard self.token != nil, self.uid != nil else {
-       ShowAlert.notifyUser("Error", message: "Sync error, learn about concurrency, bro!", controller: self)
+      ShowAlert.notifyUser("Error", message: "Sync error, learn about concurrency, bro!", controller: self)
       return
     }
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     appDelegate.authToken = self.token!
     appDelegate.userName = self.username!
     appDelegate.myId = self.uid!
+    
+    //save token
+    let defaults = UserDefaults.standard
+    defaults.set(self.token!, forKey: "authToken")
+    defaults.set(self.uid!, forKey: "myId")
+    defaults.set(self.username!, forKey: "username")
     self.performSegue(withIdentifier: "singInSegue", sender: self)
   }
-  
-  
   
   @IBAction func signInTouched(_ sender: Any) {
     if loginField.text!.isEmpty && passField.text!.isEmpty{
@@ -101,6 +105,18 @@ class AutorizationController: UIViewController {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     passField.isSecureTextEntry = true
+    
+    
+    let defaults = UserDefaults.standard
+    guard let token = defaults.string(forKey: "authToken"),
+      let uid = defaults.string(forKey: "myId"),
+      let userName = defaults.string(forKey: "username") else {
+        debugPrint("No stored config found!")
+        return
+    }
+    let tokenIsValid = AuthHelper.isTokenValid(token, controller: self)
+    debugPrint("Token is valid \(tokenIsValid) !")
+    
   }
   
   override func didReceiveMemoryWarning() {
