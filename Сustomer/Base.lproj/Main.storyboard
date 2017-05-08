@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="onF-de-bar">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cqm-YB-SiM">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -113,7 +113,7 @@
                     <connections>
                         <outlet property="loginField" destination="Dtu-di-78s" id="TZI-jq-Omn"/>
                         <outlet property="passField" destination="LRO-ax-rNI" id="hoA-Mr-X81"/>
-                        <segue destination="onF-de-bar" kind="show" identifier="singInSegue" id="Rpy-YZ-mif"/>
+                        <segue destination="onF-de-bar" kind="presentation" identifier="singInSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="Rpy-YZ-mif"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Jt-lu-KmC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -259,7 +259,7 @@
                     <navigationItem key="navigationItem" title="My orders" id="Uyg-2a-o0W">
                         <barButtonItem key="leftBarButtonItem" systemItem="reply" id="yGs-a3-aqV">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="TfS-du-1Kh"/>
+                                <segue destination="onF-de-bar" kind="show" id="VwU-Zf-kSM"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="WgJ-Un-0Ml">
@@ -312,7 +312,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="9ky-5P-WPs" kind="show" id="dfr-0u-xbS"/>
+                                            <segue destination="9ky-5P-WPs" kind="show" id="BRR-91-2Og"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkK-A5-Ja1" customClass="AllButtons" customModule="WishMaker" customModuleProvider="target">
@@ -329,13 +329,11 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="iiY-5z-RxS" appends="YES" id="d9P-uT-4i1"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="xpa-23-IR4">
                         <barButtonItem key="backBarButtonItem" title="Profile" id="Ot0-NM-6eC"/>
@@ -350,7 +348,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="iiY-5z-RxS"/>
                 <tapGestureRecognizer id="lZf-au-pMn">
                     <connections>
                         <action selector="tapTap:" destination="BYZ-38-t0r" id="w5J-nf-WMl"/>
@@ -635,15 +632,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQt-Oo-0IA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-878" y="-280"/>
+            <point key="canvasLocation" x="-958" y="-262"/>
         </scene>
     </scenes>
     <resources>
         <image name="default_profile" width="1000" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="A4I-xK-Tzw"/>
+        <segue reference="BRR-91-2Og"/>
         <segue reference="Rpy-YZ-mif"/>
-        <segue reference="dfr-0u-xbS"/>
     </inferredMetricsTieBreakers>
 </document>

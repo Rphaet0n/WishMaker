@@ -18,6 +18,7 @@ class AutorizationController: UIViewController {
   var token: String?
   var uid: Int?
   var username: String?
+  var validated = false
   
   func saveAppData() {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -106,6 +107,12 @@ class AutorizationController: UIViewController {
     loadData()
   }
   
+  
+  override func viewDidAppear(_ animated: Bool) {
+    if validated {
+      self.performSegue(withIdentifier: "singInSegue", sender: self)
+    }
+  }
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
@@ -127,7 +134,7 @@ class AutorizationController: UIViewController {
       self.uid = uid
       self.username = username
       saveAppData()
-      self.performSegue(withIdentifier: "singInSegue", sender: self)
+      self.validated = true
     }
     
   }

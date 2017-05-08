@@ -21,7 +21,6 @@
 		F42A08EB1EB68978009A5714 /* MaskFieldStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A08EA1EB68978009A5714 /* MaskFieldStatus.swift */; };
 		F42A08ED1EB689A9009A5714 /* MaskFieldUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A08EC1EB689A9009A5714 /* MaskFieldUtility.swift */; };
 		F42A08EF1EB693C7009A5714 /* ItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A08EE1EB693C7009A5714 /* ItemController.swift */; };
-		F44105421EC0F96D00A8C8D9 /* WorkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44105401EC0F96D00A8C8D9 /* WorkTableViewController.swift */; };
 		F44105571EC1047200A8C8D9 /* MyOrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44105561EC1047200A8C8D9 /* MyOrderTableViewController.swift */; };
 		F44105591EC104A400A8C8D9 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44105581EC104A400A8C8D9 /* SearchTableViewCell.swift */; };
 		F441055B1EC1072700A8C8D9 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F441055A1EC1072700A8C8D9 /* SearchTableViewController.swift */; };
@@ -54,7 +53,6 @@
 		F42A08EA1EB68978009A5714 /* MaskFieldStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskFieldStatus.swift; sourceTree = "<group>"; };
 		F42A08EC1EB689A9009A5714 /* MaskFieldUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskFieldUtility.swift; sourceTree = "<group>"; };
 		F42A08EE1EB693C7009A5714 /* ItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemController.swift; sourceTree = "<group>"; };
-		F44105401EC0F96D00A8C8D9 /* WorkTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkTableViewController.swift; path = "../Downloads/WishMaker 22.04.06/Сustomer/WorkTableViewController.swift"; sourceTree = "<group>"; };
 		F44105561EC1047200A8C8D9 /* MyOrderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyOrderTableViewController.swift; path = "Сustomer/MyOrderTableViewController.swift"; sourceTree = "<group>"; };
 		F44105581EC104A400A8C8D9 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchTableViewCell.swift; path = "Сustomer/SearchTableViewCell.swift"; sourceTree = "<group>"; };
 		F441055A1EC1072700A8C8D9 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchTableViewController.swift; path = "Сustomer/SearchTableViewController.swift"; sourceTree = "<group>"; };
@@ -144,7 +142,6 @@
 		F44105451EC0FA8500A8C8D9 /* TableViews */ = {
 			isa = PBXGroup;
 			children = (
-				F44105401EC0F96D00A8C8D9 /* WorkTableViewController.swift */,
 				F44105561EC1047200A8C8D9 /* MyOrderTableViewController.swift */,
 				F441055A1EC1072700A8C8D9 /* SearchTableViewController.swift */,
 			);
@@ -348,7 +345,6 @@
 				F4D12A9D1EB6857400B549BF /* MaskField.swift in Sources */,
 				F44105591EC104A400A8C8D9 /* SearchTableViewCell.swift in Sources */,
 				F42A08E91EB68946009A5714 /* MaskFieldPatternCharacter.swift in Sources */,
-				F44105421EC0F96D00A8C8D9 /* WorkTableViewController.swift in Sources */,
 				ABD89ECA1EBF3CEB009C4061 /* AlertsFile.swift in Sources */,
 				3FF0B25A1EBA25A100EDDFCB /* UserModel.swift in Sources */,
 				3FF0B2591EBA25A100EDDFCB /* OrderModel.swift in Sources */,

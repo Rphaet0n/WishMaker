@@ -41,5 +41,15 @@ class RegistrationController: UIViewController {
       return
     }
     
+    //correct fullname arg
+    
+    let regCompleted = AuthHelper.signUp(loginField.text!, pass: passField.text!, fullname: loginField.text!, phoneNumber: phoneTextField.text!, controller: self)
+    if regCompleted {
+      self.performSegue(withIdentifier: "signUpSegue", sender: self)
+    }
+    else {
+      ShowAlert.notifyUser("Error", message: "Registration doesn't completed!", controller: self)
+      
+    }
   }
 }
