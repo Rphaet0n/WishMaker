@@ -58,4 +58,5 @@ class OrderModel: NSObject {
     //get executor
     func getWorker (_ idExecutor:Int) {
         self.idExecutor = idExecutor
-    }}
+    }
+}

@@ -69,6 +69,10 @@ UINavigationControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         picker.delegate = self
+      let appDelegate = UIApplication.shared.delegate as! AppDelegate
+      let model = OrderListModel(appDelegate.myId!, token: appDelegate.authToken!)
+      model.downloadItems()
+      
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
