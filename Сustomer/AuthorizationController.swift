@@ -8,113 +8,105 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class AutorizationController: UIViewController {
-    
+  
   @IBOutlet weak var loginField: UITextField!
   @IBOutlet weak var passField: UITextField!
   
-  //Alert windows
-  func notifyUser(_ title: String, message: String) -> Void
-  {
-    let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-    
-    let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default)
-    {
-      (result : UIAlertAction) -> Void in
-    }
-    alertController.addAction(okAction)
-    self.present(alertController, animated: true, completion: nil)
-  }
-  
-  @IBAction func signInTouched(_ sender: Any) {
-    if loginField.text!.isEmpty && passField.text!.isEmpty{
-      notifyUser("Error", message: "Login and password couldn't be empty!")
-      return
-    }
+  var token: String?
+  var uid: Int?
+  var username: String?
+
+  func loadData(){
     // login/pass
     let params: Parameters = [
-      "username": loginField.text!,
+      "username": self.username!,
       "pass": passField.text!
     ]
     let headers: HTTPHeaders = ["Content-Type":"application/json"]
-
-    
-    /*
-     Alamofire.request("https://httpbin.org/get")
-     .validate(statusCode: 200..<300)
-     .validate(contentType: ["application/json"])
-     .responseData { response in
-	    switch response.result {
-	    case .success:
-     print("Validation Successful")
-	    case .failure(let error):
-     print(error)
-	    }
-     }
-     
-     
-     URL(string: "http://localhost:5984/rooms/_all_docs")!,
-     method: .get,
-     parameters: ["include_docs": "true"])
-     .validate()
-     .responseJSON { (response) -> Void in
-     guard response.result.isSuccess else {
-     print("Error while fetching remote rooms: \(response.result.error)")
-     completion(nil)
-     return
-     }
-     
-     guard let value = response.result.value as? [String: Any],
-     let rows = value["rows"] as? [[String: Any]] else {
-     print("Malformed data received from fetchAllRooms service")
-     completion(nil)
-     return
-     }
-     
-     let rooms = rows.flatMap({ (roomDict) -> RemoteRoom? in
-     return RemoteRoom(jsonData: roomDict)
-     })
-     
-     completion(rooms)
-     
-     // handle the results as JSON
-     let todo = JSON(value)
-     // now we have the results, let's just print them though a tableview would definitely be better UI:
-     print("The todo is: " + todo.description)
-     guard let title = todo["title"].string else {
-     print("error parsing /todos/1")
-     return
-     }
-     // to access a field:
-     print("The title is: " + title
-     }
- */
-    Alamofire.request(URL(string: "http://0.0.0.0:3000/rpc/login")!, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
+    Alamofire.request("http://0.0.0.0:3000/rpc/login", method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
       .responseJSON { response in
         debugPrint("answer####: \(response) ####end answer")
-        
-        guard response.result.isSuccess, let value = response.result.value  else {
-          print("Error while fetching remote rooms: \(response.result.error)")
+        let statusCode: Int? = response.response?.statusCode
+        guard response.result.isSuccess, statusCode == 200, let value = response.result.value else {
+          if (statusCode != nil){
+            switch statusCode! {
+            case 403:  ShowAlert.notifyUser("Error", message: "Wrong login or password!", controller: self)
+            default: print("Status code: \(statusCode) \nError while fetching remote rooms: \(response.result.error)")
+            }
+            
+          } else{
+             ShowAlert.notifyUser("Connection error", message: "Server down or internet connection is bad", controller: self)
+          }
           return
         }
-        //let json = value as!
-        //print("Result:## \(json)")
-        
+        let json = JSON(value)
+        self.token =  "Bearer \(json[0]["token"].string!)"
+        self.loadID()
     }
-
+  }
+  func loadID() {
+    //Getting user_id
+    let params: Parameters = [
+      "username": self.username!
+    ]
+    let headers: HTTPHeaders = ["Content-Type":"application/json"]
+    Alamofire.request(URL(string: "http://0.0.0.0:3000/rpc/get_id")!, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
+      .responseJSON { response in
+        debugPrint("answer####: \(response) ####end answer")
+        let statusCode: Int? = response.response?.statusCode
+        guard response.result.isSuccess, statusCode == 200, let value = response.result.value else {
+          if (statusCode != nil){
+            debugPrint("Status code: \(statusCode) \nError while fetching remote rooms: \(response.result.error)")
+          } else{
+            //self.notifyUser("Connection error", message: "Server down or internet connection is bad")
+          }
+          return
+        }
+        
+        guard let json = JSON(value).dictionary, let answer = json["id_user"]?.int else {
+          return
+        }
+        self.uid = answer
+        self.signIn()
+    }
   }
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-      passField.isSecureTextEntry = true
+  func signIn () {
+    guard self.token != nil, self.uid != nil else {
+       ShowAlert.notifyUser("Error", message: "Sync error, learn about concurrency, bro!", controller: self)
+      return
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    appDelegate.authToken = self.token!
+    appDelegate.userName = self.username!
+    appDelegate.myId = self.uid!
+    self.performSegue(withIdentifier: "singInSegue", sender: self)
+  }
+  
+  
+  
+  @IBAction func signInTouched(_ sender: Any) {
+    if loginField.text!.isEmpty && passField.text!.isEmpty{
+      ShowAlert.notifyUser("Error", message: "Login and password couldn't be empty!", controller: self)
+      return
     }
-    
-    
+    self.username = loginField.text!.lowercased()
+    loadData()
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    // Do any additional setup after loading the view, typically from a nib.
+    passField.isSecureTextEntry = true
+  }
+  
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
+  
+  
 }
