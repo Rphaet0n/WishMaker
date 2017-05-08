@@ -4,6 +4,10 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>wareaglei.ttf</string>
+	</array>
 	<key>CFBundleDisplayName</key>
 	<string>WishMaker</string>
 	<key>CFBundleExecutable</key>
