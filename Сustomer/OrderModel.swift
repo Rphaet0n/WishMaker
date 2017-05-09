@@ -31,7 +31,7 @@ class OrderModel: NSObject {
     }
     
     //construct with @idOrder, @title, @city, and @price parameters
-    init(idOrder: Int, title: String, address: String, price: Int, startDate: Date) {
+    init(_ idOrder: Int, title: String, address: String, price: Int, startDate: Date) {
         self.idOrder = idOrder
         self.title = title
         self.address = address

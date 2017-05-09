@@ -20,9 +20,12 @@ class OrderListModel: NSObject{
   //properties
   weak var delegate: ModelProtocol!
   
+  
   var data : NSMutableData = NSMutableData()
   let path : String
   let token: String
+  
+  let orders = NSMutableArray()
 
   init(_ uid: Int, token: String){
     self.path = "\(URLs.host)search_order?id_customer=not.eq.\(uid)&id_executor=not.eq.\(uid)"
@@ -30,7 +33,7 @@ class OrderListModel: NSObject{
   }
   
   func downloadItems() {
-
+    //(queue: DispatchQueue.global(qos: .utility))
     let headers: HTTPHeaders = ["Accept":"application/json","Authorization":token]
     Alamofire.request(URL(string: self.path)!, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers)
       .responseJSON { response in
@@ -46,15 +49,21 @@ class OrderListModel: NSObject{
         }
         
         guard let json = JSON(value).array  else {
+          debugPrint("#####Error: can't parse JSON to ARRAY!")
           return
         }
         
-        for dict in json {
-          if let dic = dict.dictionary {
-            print(String(describing: dic["title"]!))
+        for i in 0..<json.count {
+          guard let dic = json[i].dictionary, let idOrder = dic["id_order"]?.int,
+            let title = dic["title"]?.string, let address = dic["city"]?.string,
+            let price = dic["price"]?.int, let startDate = dic["start_date"]?.string else {
+              debugPrint("#####Error: current short order parse error!")
+              return
           }
+          let order = OrderModel(idOrder, title: title, address: address, price: price, startDate: Date())
+           self.orders.add(order)
         }
-        
+        self.delegate.itemsDownloaded(items: self.orders)
 
     }
   }
