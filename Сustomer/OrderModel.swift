@@ -13,17 +13,21 @@ import UIKit
 class OrderModel: NSObject {
     
     //properties
-    var idOrder: Int?
+   
     var title: String?
     var desc: String?
     var price: Int?
     var address: String?
-    var latitude: Double?
-    var longitude: Double?
     var images: [UIImage] = []
     var startDate: Date?
+    //customer  name
+    
+    var latitude: Double?
+    var longitude: Double?
+
     var endDate: Date?
     var idExecutor: Int?
+     var idOrder: Int?
     
     //empty constructor
     override init()

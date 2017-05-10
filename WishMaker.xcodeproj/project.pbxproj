@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		347B5D0E084EC544F7CF747C /* Pods_WishMaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8384A466DFB2BF1DCDC635 /* Pods_WishMaker.framework */; };
+		3F875B4F1EC34538004568E8 /* WorkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F875B4E1EC34538004568E8 /* WorkTableViewController.swift */; };
+		3F875B511EC34DDE004568E8 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F875B501EC34DDE004568E8 /* SplashViewController.swift */; };
 		3FF0B2591EBA25A100EDDFCB /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF0B2571EBA25A100EDDFCB /* OrderModel.swift */; };
 		3FF0B25A1EBA25A100EDDFCB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF0B2581EBA25A100EDDFCB /* UserModel.swift */; };
 		AB46D2E81EC123E900452979 /* OrderListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB46D2E71EC123E900452979 /* OrderListModel.swift */; };
-		ABAC3D2B1EC2553D00597E1E /* WorkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAC3D2A1EC2553D00597E1E /* WorkTableViewController.swift */; };
 		ABD89ECA1EBF3CEB009C4061 /* AlertsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD89EC91EBF3CEB009C4061 /* AlertsFile.swift */; };
 		F401349C1EBF6FDD00799C26 /* MyOrdersViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F401349B1EBF6FDD00799C26 /* MyOrdersViewCell.swift */; };
 		F41660721EB0E0FB008EC75D /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41660711EB0E0FB008EC75D /* RegistrationController.swift */; };
@@ -39,12 +40,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F875B4E1EC34538004568E8 /* WorkTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkTableViewController.swift; path = "Сustomer/WorkTableViewController.swift"; sourceTree = "<group>"; };
+		3F875B501EC34DDE004568E8 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		3FF0B2571EBA25A100EDDFCB /* OrderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		3FF0B2581EBA25A100EDDFCB /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		5C67C3B6536EEFAE57B4B2BA /* Pods-WishMaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WishMaker.release.xcconfig"; path = "Pods/Target Support Files/Pods-WishMaker/Pods-WishMaker.release.xcconfig"; sourceTree = "<group>"; };
 		7C8384A466DFB2BF1DCDC635 /* Pods_WishMaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WishMaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB46D2E71EC123E900452979 /* OrderListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderListModel.swift; sourceTree = "<group>"; };
-		ABAC3D2A1EC2553D00597E1E /* WorkTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkTableViewController.swift; sourceTree = "<group>"; };
 		ABD89EC91EBF3CEB009C4061 /* AlertsFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertsFile.swift; sourceTree = "<group>"; };
 		AC29EDD8DA5C69581103D15F /* Pods-WishMaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WishMaker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WishMaker/Pods-WishMaker.debug.xcconfig"; sourceTree = "<group>"; };
 		F401349B1EBF6FDD00799C26 /* MyOrdersViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyOrdersViewCell.swift; path = "Сustomer/MyOrdersViewCell.swift"; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				F41660761EB0E21A008EC75D /* ProfileController.swift */,
 				F42A08EE1EB693C7009A5714 /* ItemController.swift */,
 				F441055C1EC1097800A8C8D9 /* CustomerViewController.swift */,
+				3F875B501EC34DDE004568E8 /* SplashViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -149,7 +152,7 @@
 			children = (
 				F44105561EC1047200A8C8D9 /* MyOrderTableViewController.swift */,
 				F441055A1EC1072700A8C8D9 /* SearchTableViewController.swift */,
-				ABAC3D2A1EC2553D00597E1E /* WorkTableViewController.swift */,
+				3F875B4E1EC34538004568E8 /* WorkTableViewController.swift */,
 			);
 			name = TableViews;
 			path = ..;
@@ -351,8 +354,9 @@
 				AB46D2E81EC123E900452979 /* OrderListModel.swift in Sources */,
 				F4D12A9D1EB6857400B549BF /* MaskField.swift in Sources */,
 				F44105591EC104A400A8C8D9 /* SearchTableViewCell.swift in Sources */,
+				3F875B511EC34DDE004568E8 /* SplashViewController.swift in Sources */,
 				F42A08E91EB68946009A5714 /* MaskFieldPatternCharacter.swift in Sources */,
-				ABAC3D2B1EC2553D00597E1E /* WorkTableViewController.swift in Sources */,
+				3F875B4F1EC34538004568E8 /* WorkTableViewController.swift in Sources */,
 				ABD89ECA1EBF3CEB009C4061 /* AlertsFile.swift in Sources */,
 				3FF0B25A1EBA25A100EDDFCB /* UserModel.swift in Sources */,
 				3FF0B2591EBA25A100EDDFCB /* OrderModel.swift in Sources */,
