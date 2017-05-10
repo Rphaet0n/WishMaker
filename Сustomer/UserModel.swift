@@ -16,7 +16,7 @@ class UserModel: NSObject {
     var idUser: Int?
     var fullName: String?
     var mobileNo: String?
-    var rating: Double?
+    var rating: String?
     var avatar: UIImage?
     
     //empty constructor
@@ -25,7 +25,7 @@ class UserModel: NSObject {
     }
     
     //construct with @idUser, @fullName, @mobileNo, @rating, and @avatar parameters
-    init(idUser: Int, fullName: String, mobileNo: String, rating: Double, avatar: UIImage? = nil) {
+    init(_ idUser: Int, fullName: String, mobileNo: String, rating: String, avatar: UIImage? = nil) {
         self.idUser = idUser
         self.fullName = fullName
         self.mobileNo = mobileNo

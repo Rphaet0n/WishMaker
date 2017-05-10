@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		347B5D0E084EC544F7CF747C /* Pods_WishMaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8384A466DFB2BF1DCDC635 /* Pods_WishMaker.framework */; };
+		3F34AA331EC362CA00743663 /* AuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F34AA311EC362CA00743663 /* AuthHelper.swift */; };
+		3F34AA341EC362CA00743663 /* ImageConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F34AA321EC362CA00743663 /* ImageConverter.swift */; };
+		3F34AA361EC362DC00743663 /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F34AA351EC362DC00743663 /* UserInfoModel.swift */; };
 		3F875B4F1EC34538004568E8 /* WorkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F875B4E1EC34538004568E8 /* WorkTableViewController.swift */; };
 		3F875B511EC34DDE004568E8 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F875B501EC34DDE004568E8 /* SplashViewController.swift */; };
 		3FF0B2591EBA25A100EDDFCB /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF0B2571EBA25A100EDDFCB /* OrderModel.swift */; };
@@ -40,6 +43,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F34AA311EC362CA00743663 /* AuthHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthHelper.swift; sourceTree = "<group>"; };
+		3F34AA321EC362CA00743663 /* ImageConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageConverter.swift; sourceTree = "<group>"; };
+		3F34AA351EC362DC00743663 /* UserInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
 		3F875B4E1EC34538004568E8 /* WorkTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkTableViewController.swift; path = "Сustomer/WorkTableViewController.swift"; sourceTree = "<group>"; };
 		3F875B501EC34DDE004568E8 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		3FF0B2571EBA25A100EDDFCB /* OrderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
@@ -100,6 +106,7 @@
 		3FF0B2521EBA253600EDDFCB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3F34AA351EC362DC00743663 /* UserInfoModel.swift */,
 				3FF0B2571EBA25A100EDDFCB /* OrderModel.swift */,
 				3FF0B2581EBA25A100EDDFCB /* UserModel.swift */,
 				AB46D2E71EC123E900452979 /* OrderListModel.swift */,
@@ -119,6 +126,8 @@
 		F410F86E1EBE13610066487B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3F34AA311EC362CA00743663 /* AuthHelper.swift */,
+				3F34AA321EC362CA00743663 /* ImageConverter.swift */,
 				ABD89EC91EBF3CEB009C4061 /* AlertsFile.swift */,
 			);
 			name = Classes;
@@ -356,17 +365,20 @@
 				F44105591EC104A400A8C8D9 /* SearchTableViewCell.swift in Sources */,
 				3F875B511EC34DDE004568E8 /* SplashViewController.swift in Sources */,
 				F42A08E91EB68946009A5714 /* MaskFieldPatternCharacter.swift in Sources */,
+				3F34AA331EC362CA00743663 /* AuthHelper.swift in Sources */,
 				3F875B4F1EC34538004568E8 /* WorkTableViewController.swift in Sources */,
 				ABD89ECA1EBF3CEB009C4061 /* AlertsFile.swift in Sources */,
 				3FF0B25A1EBA25A100EDDFCB /* UserModel.swift in Sources */,
 				3FF0B2591EBA25A100EDDFCB /* OrderModel.swift in Sources */,
 				F41660741EB0E187008EC75D /* AuthorizationController.swift in Sources */,
 				F41660721EB0E0FB008EC75D /* RegistrationController.swift in Sources */,
+				3F34AA361EC362DC00743663 /* UserInfoModel.swift in Sources */,
 				F42A08EB1EB68978009A5714 /* MaskFieldStatus.swift in Sources */,
 				F4DEED6B1EACE2B100899DE2 /* AppDelegate.swift in Sources */,
 				F42A08E71EB688FF009A5714 /* MaskFieldEvent.swift in Sources */,
 				F42A08EF1EB693C7009A5714 /* ItemController.swift in Sources */,
 				F4D12AA21EB6870D00B549BF /* MaskFieldBlockCharacter.swift in Sources */,
+				3F34AA341EC362CA00743663 /* ImageConverter.swift in Sources */,
 				F44105571EC1047200A8C8D9 /* MyOrderTableViewController.swift in Sources */,
 				F4742B401EC113D900E3EB0D /* AllButtons.swift in Sources */,
 				F401349C1EBF6FDD00799C26 /* MyOrdersViewCell.swift in Sources */,
