@@ -9,7 +9,14 @@ import UIKit
 
 class ProfileController: UIViewController,
     UIImagePickerControllerDelegate,
-UINavigationControllerDelegate {
+UINavigationControllerDelegate, ModelProtocol {
+    
+    @IBOutlet weak var rating: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var phone: UILabel!
+    
+    var user : UserModel?
+    
     
     @IBAction func tapTap(_ sender: UITapGestureRecognizer) {
         
@@ -69,12 +76,27 @@ UINavigationControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         picker.delegate = self
-      //let appDelegate = UIApplication.shared.delegate as! AppDelegate
-      //let model = OrderListModel(appDelegate.myId!, token: appDelegate.authToken!)
-      //model.downloadItems()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let token = appDelegate.authToken!
+        let uid = appDelegate.myId!
+        let userInfoModel = UserInfoModel(uid, token: token)
+        userInfoModel.delegate = self
+        userInfoModel.downloadItems()
       
     }
-    
+    func itemsDownloaded(items: NSArray) {
+        guard items.count > 0, let user = items[0] as? UserModel else {
+            debugPrint("Cant cast to UserModel !")
+            return
+        }
+        self.user = user
+        avatarView.image = user.avatar
+        self.name.text = user.fullName
+        self.rating.text = user.rating
+        self.phone.text = user.mobileNo
+        //fill fields
+        
+    }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let chosenImage = info[UIImagePickerControllerEditedImage] as? UIImage { //2
             avatarView.contentMode = .scaleAspectFit //3

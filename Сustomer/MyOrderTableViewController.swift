@@ -33,8 +33,11 @@ class MyOrderTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "myOrderCell", for: indexPath) as! MyOrdersViewCell
         
-        cell.itemname.text = self.orders?[indexPath.row].title
+        cell.title.text = self.orders?[indexPath.row].title
         cell.checking.isEnabled = (self.orders?[indexPath.row].IsEnabled())!
+        if (cell.checking.isEnabled) {
+            cell.checking.borderColor = .red
+        }
         
         return cell
     }

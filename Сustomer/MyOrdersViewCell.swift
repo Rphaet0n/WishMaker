@@ -9,9 +9,8 @@
 import UIKit
 
 class MyOrdersViewCell: UITableViewCell {
-    @IBOutlet weak var itemname: UILabel!
-
-    @IBOutlet weak var checking: UIButton!
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var checking: AllButtons!
     
     override func awakeFromNib() {
         super.awakeFromNib()
