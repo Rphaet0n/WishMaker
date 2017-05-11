@@ -1,21 +1,21 @@
-//
-//  CategoryModel.swift
-//  WishMaker
-//
-//  Created by mr.phaet0n on 5/9/17.
-//  Copyright © 2017 Company. All rights reserved.
-//
-
-import Foundation
-import Alamofire
-import SwiftyJSON
-
-protocol ModelProtocol: class {
+ //
+ //  CategoryModel.swift
+ //  WishMaker
+ //
+ //  Created by mr.phaet0n on 5/9/17.
+ //  Copyright © 2017 Company. All rights reserved.
+ //
+ 
+ import Foundation
+ import Alamofire
+ import SwiftyJSON
+ 
+ protocol ModelProtocol: class {
   func itemsDownloaded(items: NSArray)
-}
-
-
-class OrderListModel: NSObject{
+ }
+ 
+ 
+ class OrderListModel: NSObject{
   
   //properties
   weak var delegate: ModelProtocol!
@@ -26,14 +26,13 @@ class OrderListModel: NSObject{
   let token: String
   
   let orders = NSMutableArray()
-
+  
   init(_ uid: Int, token: String){
     self.path = "\(URLs.host)search_order?id_customer=not.eq.\(uid)&id_executor=not.eq.\(uid)"
     self.token = token
   }
   
   func downloadItems() {
-    //(queue: DispatchQueue.global(qos: .utility))
     let headers: HTTPHeaders = ["Accept":"application/json","Authorization":token]
     Alamofire.request(URL(string: self.path)!, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers)
       .responseJSON { response in
@@ -55,17 +54,20 @@ class OrderListModel: NSObject{
         
         for i in 0..<json.count {
           guard let dic = json[i].dictionary, let idOrder = dic["id_order"]?.int,
+            let idExecutor = dic["id_executor"]?.int,
             let title = dic["title"]?.string, let address = dic["city"]?.string,
             let price = dic["price"]?.int, let startDate = dic["start_date"]?.string else {
               debugPrint("#####Error: current short order parse error!")
               return
           }
-          let order = OrderModel(idOrder, title: title, address: address, price: price, startDate: Date())
-           self.orders.add(order)
+          let order = OrderModel(idOrder, title: title, address: address,
+                                 price: price, startDate: ImageConverter.parseDate(startDate),
+                                 idExecutor: idExecutor)
+          self.orders.add(order)
         }
         self.delegate.itemsDownloaded(items: self.orders)
-
+        
     }
   }
   
-}
+ }

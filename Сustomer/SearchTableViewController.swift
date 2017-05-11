@@ -48,4 +48,19 @@ class SearchTableViewController: UITableViewController, ModelProtocol {
         cell.price?.text = "\(order.price!)"
         return cell
     }
+  
+  override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    selectedOrder = tableData[indexPath.row] as! OrderModel
+    // Manually call segue to detail view controller
+    self.performSegue(withIdentifier: "fullOrderSegue", sender: self)
+  }
+
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    let orderVC  = segue.destination as! OrderViewController
+    // Set the property to the selected location so when the view for
+    // detail view controller loads, it can access that property to get the feeditem obj
+    orderVC.order = selectedOrder
+  }
+  
 }

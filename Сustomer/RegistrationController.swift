@@ -15,6 +15,7 @@ class RegistrationController: UIViewController {
   @IBOutlet weak var loginField: UITextField!
   @IBOutlet weak var passField: UITextField!
   @IBOutlet weak var confirmField: UITextField!
+  @IBOutlet weak var fullnameField: UITextField!
   
   
   override func viewDidLoad() {
@@ -31,7 +32,8 @@ class RegistrationController: UIViewController {
   
   @IBAction func signUpTouched(_ sender: Any) {
     if loginField.text!.isEmpty || passField.text!.isEmpty ||
-      confirmField.text!.isEmpty || phoneTextField!.text!.isEmpty {
+      confirmField.text!.isEmpty || phoneTextField!.text!.isEmpty ||
+      fullnameField!.text!.isEmpty{
       ShowAlert.notifyUser("Error", message: "All fields must be filled!", controller: self)
       return
     }
@@ -43,7 +45,7 @@ class RegistrationController: UIViewController {
     
     //correct fullname arg
     
-    let regCompleted = AuthHelper.signUp(loginField.text!, pass: passField.text!, fullname: loginField.text!, phoneNumber: phoneTextField.text!, controller: self)
+    let regCompleted = AuthHelper.signUp(loginField.text!, pass: passField.text!, fullname: fullnameField!.text!, phoneNumber: phoneTextField.text!, controller: self)
     if regCompleted {
       self.performSegue(withIdentifier: "signUpSegue", sender: self)
     }

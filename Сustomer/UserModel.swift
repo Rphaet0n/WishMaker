@@ -37,5 +37,6 @@ class UserModel: NSObject {
     override var description: String {
         return "idUser: \(idUser), fullName: \(fullName), mobileNo: \(mobileNo), rating: \(rating)"
     }
-    
+
+  
 }
