@@ -16,6 +16,7 @@ class OrderViewController: UIViewController, FullOrderProtocol {
   @IBOutlet weak var addressLabel: UILabel!
   @IBOutlet weak var priceLabel: UILabel!
   
+  @IBOutlet weak var customerButton: AllButtons!
   
   var order: OrderModel!
   
@@ -30,18 +31,18 @@ class OrderViewController: UIViewController, FullOrderProtocol {
     self.descField.text = order.desc
     self.addressLabel.text = order.address
     self.priceLabel.text = String(describing: order.price!)
+    self.customerButton.titleLabel?.text = order.customerName
   }
   
     override func viewDidLoad() {
-        super.viewDidLoad()
+      super.viewDidLoad()
+      self.customerButton?.titleLabel?.text = order.customerName
         // Do any additional setup after loading the view.
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let fullOrderModel = FullOrderModel(self.order!, token: appDelegate.authToken!)
+        fullOrderModel.delegate = self
         fullOrderModel.downloadFullOrder()
-        self.titleLabel.text = order.title
-        self.descField.text = order.desc
-        self.addressLabel.text = order.address
-        self.priceLabel.text = String(describing: order.price!)
+
     }
 
     override func didReceiveMemoryWarning() {

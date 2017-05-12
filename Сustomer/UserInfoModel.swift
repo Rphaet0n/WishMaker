@@ -68,7 +68,7 @@ class UserInfoModel: NSObject{
           return
         }
         
-        guard let json = JSON(value).array  else {
+        guard let json = JSON(value).array, json.count > 0  else {
           debugPrint("#####Error: can't parse JSON to ARRAY!")
           return
         }

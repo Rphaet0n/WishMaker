@@ -34,7 +34,7 @@ class FullOrderModel: NSObject{
   
   init(_ order: OrderModel, token: String){
     self.order = order
-    self.path = "\(URLs.host)full_order?id_order=eq.\(order.idOrder!)"
+    self.path = "\(URLs.host)full_orders?id_order=eq.\(order.idOrder!)"
     self.token = token
   }
   

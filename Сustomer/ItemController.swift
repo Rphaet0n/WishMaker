@@ -14,28 +14,34 @@ import SwiftyJSON
 
 class ItemController: UIViewController {
   
-  @IBOutlet weak var titleField: UITextField!
+ /* @IBOutlet weak var titleField: UITextField!
   @IBOutlet weak var addressField: UITextField!
   @IBOutlet weak var descField: UITextView!
   @IBOutlet weak var priceField: UITextField!
+  */
+  @IBOutlet weak var priceField: UITextField!
+  @IBOutlet weak var addressField: UITextField!
   
-  let appDelegate = UIApplication.shared.delegate as! AppDelegate
+  @IBOutlet weak var descField: UITextView!
+  @IBOutlet weak var titleField: UITextField!
   let order = OrderModel()
-  let path = "\(URLs.host)rpc/add_order"
+
   
-  func addOrder (avatar: String) {
+  func addOrder () {
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let path = "\(URLs.host)rpc/add_order"
     let headers: HTTPHeaders = ["Accept":"application/json","Authorization":appDelegate.authToken!]
     let params: Parameters = [
       "iduser": appDelegate.myId!,
       "tittle": self.order.title!,
       "descr": self.order.desc!,
-      "pprice": self.order.title!,
+      "pprice": self.order.price!,
       "addr": self.order.address!,
       "lat": self.order.latitude ?? String(describing: "") ,
       "longt": self.order.longtitude ?? String(describing: "")
     ]
     
-    Alamofire.request(URL(string: self.path)!, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
+    Alamofire.request(URL(string: path)!, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
       .responseJSON (){ response in
         debugPrint("answer####: \(response) ####end answer")
         let statusCode: Int? = response.response?.statusCode
@@ -50,6 +56,8 @@ class ItemController: UIViewController {
   }
   
   @IBAction func addButtonTouched(_ sender: Any) {
+    //correct
+    //let desc = "asdasdaasd"
     
     guard let title = titleField.text,
       let address = addressField.text,
@@ -62,15 +70,13 @@ class ItemController: UIViewController {
     }
     
     self.order.title = title
-    self.order.desc = desc
+    self.order.desc =  desc
     self.order.price = price
     self.order.address = address
     //lat long id
-    
+    self.addOrder()
     
   }
-  public static var var1 = 1
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     
