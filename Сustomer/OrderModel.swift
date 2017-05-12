@@ -15,7 +15,7 @@ import SwiftyJSON
 enum OrderStatus: String {
   case active = "active"
   case done = "done"
-  case faild = "failed"
+  case failed = "failed"
   case processing = "processing"
 }
 

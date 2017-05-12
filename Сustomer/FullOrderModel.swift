@@ -88,17 +88,17 @@ class FullOrderModel: NSObject{
   
   func acceptOrder(_ uid: Int) -> Bool {
     var result = false
-    let semaphore = DispatchSemaphore(value: 0)
-    let utilityQueue = DispatchQueue.global(qos: .utility)
     let headers: HTTPHeaders = ["Accept":"application/json","Authorization":token]
     let acceptURL = "\(URLs.host)rpc/takeorder"
     let params : Parameters =
       ["id_user":uid, "id_order":self.order.idOrder!]
+    let semaphore = DispatchSemaphore(value: 0)
+    let utilityQueue = DispatchQueue.global(qos: .utility)
     Alamofire.request(URL(string: acceptURL)!, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
       .responseJSON(queue: utilityQueue) { response in
         debugPrint("answer####: \(response) ####end answer")
         let statusCode: Int? = response.response?.statusCode
-        guard response.result.isSuccess, statusCode == 200 else {
+        guard response.result.isSuccess, statusCode! < 301 else {
           if (statusCode != nil){
             debugPrint("Status code: \(statusCode) \nError while fetching remote rooms: \(response.result.error)")
           } else{
@@ -108,26 +108,26 @@ class FullOrderModel: NSObject{
           semaphore.signal()
           return
         }
-        semaphore.signal()
         result = true
+        semaphore.signal() 
     }
-    let _ = semaphore.wait(timeout: .now() + 3.0)
+    semaphore.wait(timeout: .now() + 3.0)
     return result
   }
   
   func disagreeOrder(_ uid: Int) -> Bool {
     var result = false
-    let semaphore = DispatchSemaphore(value: 0)
-    let utilityQueue = DispatchQueue.global(qos: .utility)
     let headers: HTTPHeaders = ["Accept":"application/json","Authorization":token]
     let acceptURL = "\(URLs.host)rpc/failorder"
     let params : Parameters =
       ["id_user":uid, "id_order":self.order.idOrder!]
+    let semaphore = DispatchSemaphore(value: 0)
+    let utilityQueue = DispatchQueue.global(qos: .utility)
     Alamofire.request(URL(string: acceptURL)!, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
       .responseJSON(queue: utilityQueue) { response in
         debugPrint("answer####: \(response) ####end answer")
         let statusCode: Int? = response.response?.statusCode
-        guard response.result.isSuccess, statusCode == 200 else {
+        guard response.result.isSuccess, statusCode! < 300 else {
           if (statusCode != nil){
             debugPrint("Status code: \(statusCode) \nError while fetching remote rooms: \(response.result.error)")
           } else{
@@ -137,10 +137,10 @@ class FullOrderModel: NSObject{
           semaphore.signal()
           return
         }
-        semaphore.signal()
         result = true
+        semaphore.signal()
     }
-    let _ = semaphore.wait(timeout: .now() + 3.0)
+    semaphore.wait(timeout: .now() + 3.0)
     return result
   }
 }

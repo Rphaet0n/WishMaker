@@ -43,7 +43,7 @@ class WorkTableViewController: UITableViewController, ModelProtocol {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "searchCell")! as! SearchTableViewCell
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "workCell")! as! SearchTableViewCell
         let order = tableData[indexPath.row] as! OrderModel
         cell.rootOrder = order
         cell.title?.text = order.title!
