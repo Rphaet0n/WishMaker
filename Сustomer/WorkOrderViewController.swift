@@ -15,13 +15,14 @@ class WorkOrderViewController: UIViewController, FullOrderProtocol {
     @IBOutlet weak var imagesView: UIImageView!
     @IBOutlet weak var descField: UITextView!
     @IBOutlet weak var addressLabel: UILabel!
-
+    
     @IBOutlet weak var priceLabel: UILabel!
     
     @IBOutlet weak var customerButton: AllButtons!
+    @IBOutlet weak var disagree: AllButtons!
     
     var order: OrderModel!
-  
+    
     var fullOrderModel : FullOrderModel?
     
     func orderLoaded(order: OrderModel){
@@ -36,6 +37,11 @@ class WorkOrderViewController: UIViewController, FullOrderProtocol {
         self.addressLabel.text = order.address
         self.priceLabel.text = String(describing: order.price!)
         self.customerButton.setTitle(order.customerName, for: .normal)
+        self.disagreeButtonTouched.isEnabled = (self.order.status != OrderStatus.done.rawValue)
+        if !self.disagreeButtonTouched.isEnabled {
+            self.disagreeButtonTouched.isHidden = true
+        }
+        
     }
     
     override func viewDidLoad() {
@@ -70,14 +76,14 @@ class WorkOrderViewController: UIViewController, FullOrderProtocol {
                 dest.lat = latcor
             }
         } else if segue.identifier == "disagreeSegue" {
-                  let appDelegate = UIApplication.shared.delegate as! AppDelegate
-          let isCanceled = self.fullOrderModel?.disagreeOrder(appDelegate.myId!)
-          guard isCanceled! else {
-            ShowAlert.notifyUser("Error", message: "Couldn't cancel order!", controller: self)
-            return
-          }
-      }
-      
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let isCanceled = self.fullOrderModel?.disagreeOrder(appDelegate.myId!)
+            guard isCanceled! else {
+                ShowAlert.notifyUser("Error", message: "Couldn't cancel order!", controller: self)
+                return
+            }
+        }
+        
     }
     
     /*
