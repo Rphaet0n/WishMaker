@@ -20,6 +20,8 @@ class OrderViewController: UIViewController, FullOrderProtocol {
   
   var order: OrderModel!
   
+  var fullOrderModel : FullOrderModel?
+  
   func orderLoaded(order: OrderModel){
     self.order = order
     self.updateScreen()
@@ -39,9 +41,9 @@ class OrderViewController: UIViewController, FullOrderProtocol {
       self.customerButton?.titleLabel?.text = order.customerName
         // Do any additional setup after loading the view.
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let fullOrderModel = FullOrderModel(self.order!, token: appDelegate.authToken!)
-        fullOrderModel.delegate = self
-        fullOrderModel.downloadFullOrder()
+        self.fullOrderModel = FullOrderModel(self.order!, token: appDelegate.authToken!)
+        self.fullOrderModel?.delegate = self
+        self.fullOrderModel?.downloadFullOrder()
 
     }
 
@@ -63,6 +65,13 @@ class OrderViewController: UIViewController, FullOrderProtocol {
       if let dest = segue.destination as? MappinForExecutorViewController {
         dest.longt = longtcor
         dest.lat = latcor
+      }
+    }else if segue.identifier == "acceptSegue" {
+      let appDelegate = UIApplication.shared.delegate as! AppDelegate
+      let isAgreed = self.fullOrderModel?.acceptOrder(appDelegate.myId!)
+      guard isAgreed! else {
+        ShowAlert.notifyUser("Error", message: "Couldn't cancel order!", controller: self)
+        return
       }
     }
   }

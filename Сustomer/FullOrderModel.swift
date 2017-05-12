@@ -85,4 +85,62 @@ class FullOrderModel: NSObject{
         self.delegate.orderLoaded(order: self.order)
     }
   }
+  
+  func acceptOrder(_ uid: Int) -> Bool {
+    var result = false
+    let semaphore = DispatchSemaphore(value: 0)
+    let utilityQueue = DispatchQueue.global(qos: .utility)
+    let headers: HTTPHeaders = ["Accept":"application/json","Authorization":token]
+    let acceptURL = "\(URLs.host)rpc/takeorder"
+    let params : Parameters =
+      ["id_user":uid, "id_order":self.order.idOrder!]
+    Alamofire.request(URL(string: acceptURL)!, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
+      .responseJSON(queue: utilityQueue) { response in
+        debugPrint("answer####: \(response) ####end answer")
+        let statusCode: Int? = response.response?.statusCode
+        guard response.result.isSuccess, statusCode == 200 else {
+          if (statusCode != nil){
+            debugPrint("Status code: \(statusCode) \nError while fetching remote rooms: \(response.result.error)")
+          } else{
+            //self.notifyUser("Connection error", message: "Server down or internet connection is bad")
+          }
+          result = false
+          semaphore.signal()
+          return
+        }
+        semaphore.signal()
+        result = true
+    }
+    let _ = semaphore.wait(timeout: .now() + 3.0)
+    return result
+  }
+  
+  func disagreeOrder(_ uid: Int) -> Bool {
+    var result = false
+    let semaphore = DispatchSemaphore(value: 0)
+    let utilityQueue = DispatchQueue.global(qos: .utility)
+    let headers: HTTPHeaders = ["Accept":"application/json","Authorization":token]
+    let acceptURL = "\(URLs.host)rpc/failorder"
+    let params : Parameters =
+      ["id_user":uid, "id_order":self.order.idOrder!]
+    Alamofire.request(URL(string: acceptURL)!, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
+      .responseJSON(queue: utilityQueue) { response in
+        debugPrint("answer####: \(response) ####end answer")
+        let statusCode: Int? = response.response?.statusCode
+        guard response.result.isSuccess, statusCode == 200 else {
+          if (statusCode != nil){
+            debugPrint("Status code: \(statusCode) \nError while fetching remote rooms: \(response.result.error)")
+          } else{
+            //self.notifyUser("Connection error", message: "Server down or internet connection is bad")
+          }
+          result = false
+          semaphore.signal()
+          return
+        }
+        semaphore.signal()
+        result = true
+    }
+    let _ = semaphore.wait(timeout: .now() + 3.0)
+    return result
+  }
 }

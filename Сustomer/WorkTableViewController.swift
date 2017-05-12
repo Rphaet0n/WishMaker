@@ -54,7 +54,7 @@ class WorkTableViewController: UITableViewController, ModelProtocol {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier  == "infoOrder"  {
-            if let infoOrderVC = segue.destination as? OrderViewController {
+            if let infoOrderVC = segue.destination as? WorkOrderViewController {
                 let path = self.tableView.indexPathForSelectedRow
                 let cell: SearchTableViewCell = self.tableView.cellForRow(at: path!) as! SearchTableViewCell
                 infoOrderVC.order = cell.rootOrder

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IWf-tj-fZK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IWf-tj-fZK">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -823,7 +823,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="onF-de-bar" kind="show" id="A1U-TC-T7F"/>
+                                    <segue destination="onF-de-bar" kind="show" identifier="acceptSegue" id="A1U-TC-T7F"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMM-1W-H0q" customClass="AllButtons" customModule="WishMaker" customModuleProvider="target">
@@ -1158,7 +1158,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="hgf-9E-b56" kind="show" id="EgX-HT-jmA"/>
+                                    <segue destination="hgf-9E-b56" kind="show" identifier="disagreeSegue" id="EgX-HT-jmA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mm0-mY-Tia" customClass="AllButtons" customModule="WishMaker" customModuleProvider="target">
@@ -1279,9 +1279,9 @@
         <image name="default_profile" width="1000" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BRR-91-2Og"/>
-        <segue reference="A1U-TC-T7F"/>
-        <segue reference="BhP-gq-LTH"/>
         <segue reference="EgX-HT-jmA"/>
+        <segue reference="4sp-GL-Sx8"/>
+        <segue reference="BhP-gq-LTH"/>
+        <segue reference="A1U-TC-T7F"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -21,6 +21,8 @@ class WorkOrderViewController: UIViewController, FullOrderProtocol {
     @IBOutlet weak var customerButton: AllButtons!
     
     var order: OrderModel!
+  
+    var fullOrderModel : FullOrderModel?
     
     func orderLoaded(order: OrderModel){
         self.order = order
@@ -38,12 +40,11 @@ class WorkOrderViewController: UIViewController, FullOrderProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.customerButton?.titleLabel?.text = order.customerName
         // Do any additional setup after loading the view.
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let fullOrderModel = FullOrderModel(self.order!, token: appDelegate.authToken!)
-        fullOrderModel.delegate = self
-        fullOrderModel.downloadFullOrder()
+        self.fullOrderModel = FullOrderModel(self.order!, token: appDelegate.authToken!)
+        self.fullOrderModel?.delegate = self
+        self.fullOrderModel?.downloadFullOrder()
         
     }
     
@@ -68,7 +69,15 @@ class WorkOrderViewController: UIViewController, FullOrderProtocol {
                 dest.longt = longtcor
                 dest.lat = latcor
             }
-        }
+        } else if segue.identifier == "disagreeSegue" {
+                  let appDelegate = UIApplication.shared.delegate as! AppDelegate
+          let isCanceled = self.fullOrderModel?.disagreeOrder(appDelegate.myId!)
+          guard isCanceled! else {
+            ShowAlert.notifyUser("Error", message: "Couldn't cancel order!", controller: self)
+            return
+          }
+      }
+      
     }
     
     /*
