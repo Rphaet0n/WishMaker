@@ -64,8 +64,8 @@ class FullOrderModel: NSObject{
         }
         self.order.status = dic["status"]?.string
         self.order.desc = dic["description"]?.string
-        self.order.latitude = dic["latitude"]?.double
-        self.order.longtitude = dic["longtitude"]?.double
+        self.order.latitude = dic["latitude"]?.string
+        self.order.longtitude = dic["longtitude"]?.string
         self.order.customerName = dic["full_name"]?.string
 
         if let endDate = dic["end_date"]?.string {

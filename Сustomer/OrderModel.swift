@@ -31,8 +31,8 @@ class OrderModel: NSObject {
   var startDate: String?
   //customer  name
   
-  var latitude: Double?
-  var longtitude: Double?
+  var latitude: String?
+  var longtitude: String?
   
   var endDate: String?
   var idExecutor: Int?
