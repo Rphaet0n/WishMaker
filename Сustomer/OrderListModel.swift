@@ -26,9 +26,9 @@
   let token: String
   
   let orders = NSMutableArray()
-  
-  init(_ uid: Int, token: String){
-    self.path = "\(URLs.host)search_order?id_customer=not.eq.\(uid)&id_executor=not.eq.\(uid)"
+    
+    init(_ uid: Int, token: String, url: String? = nil){
+        self.path = url != nil ? url! : "\(URLs.host)search_order?id_customer=not.eq.\(uid)&id_executor=not.eq.\(uid)&status=eq.active"
     self.token = token
   }
   
@@ -56,13 +56,15 @@
           guard let dic = json[i].dictionary, let idOrder = dic["id_order"]?.int,
             let idExecutor = dic["id_executor"]?.int,
             let title = dic["title"]?.string, let address = dic["city"]?.string,
-            let price = dic["price"]?.int, let startDate = dic["start_date"]?.string else {
+            let price = dic["price"]?.int, let startDate = dic["start_date"]?.string,
+            let status = dic["status"]?.string else {
               debugPrint("#####Error: current short order parse error!")
               return
           }
           let order = OrderModel(idOrder, title: title, address: address,
                                  price: price, startDate: ImageConverter.parseDate(startDate),
                                  idExecutor: idExecutor)
+        order.status = status
           self.orders.add(order)
         }
         self.delegate.itemsDownloaded(items: self.orders)

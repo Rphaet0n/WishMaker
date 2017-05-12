@@ -34,6 +34,8 @@
 		F44105591EC104A400A8C8D9 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44105581EC104A400A8C8D9 /* SearchTableViewCell.swift */; };
 		F441055B1EC1072700A8C8D9 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F441055A1EC1072700A8C8D9 /* SearchTableViewController.swift */; };
 		F441055D1EC1097800A8C8D9 /* CustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F441055C1EC1097800A8C8D9 /* CustomerViewController.swift */; };
+		F46F05F71EC62E5200F3B720 /* WorkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F05F61EC62E5200F3B720 /* WorkTableViewCell.swift */; };
+		F46F05F91EC63C9E00F3B720 /* WorkOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F05F81EC63C9E00F3B720 /* WorkOrderViewController.swift */; };
 		F4742B401EC113D900E3EB0D /* AllButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4742B3F1EC113D900E3EB0D /* AllButtons.swift */; };
 		F4BF51A61EC5EFA0008C1A43 /* MappingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BF51A51EC5EFA0008C1A43 /* MappingViewController.swift */; };
 		F4BF51A81EC5EFC1008C1A43 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4BF51A71EC5EFC1008C1A43 /* CoreLocation.framework */; };
@@ -79,6 +81,8 @@
 		F44105581EC104A400A8C8D9 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchTableViewCell.swift; path = "Сustomer/SearchTableViewCell.swift"; sourceTree = "<group>"; };
 		F441055A1EC1072700A8C8D9 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchTableViewController.swift; path = "Сustomer/SearchTableViewController.swift"; sourceTree = "<group>"; };
 		F441055C1EC1097800A8C8D9 /* CustomerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerViewController.swift; sourceTree = "<group>"; };
+		F46F05F61EC62E5200F3B720 /* WorkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkTableViewCell.swift; path = "Сustomer/WorkTableViewCell.swift"; sourceTree = "<group>"; };
+		F46F05F81EC63C9E00F3B720 /* WorkOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrderViewController.swift; sourceTree = "<group>"; };
 		F4742B3F1EC113D900E3EB0D /* AllButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllButtons.swift; sourceTree = "<group>"; };
 		F4BF51A51EC5EFA0008C1A43 /* MappingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappingViewController.swift; sourceTree = "<group>"; };
 		F4BF51A71EC5EFC1008C1A43 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -165,6 +169,7 @@
 				AB4B169B1EC52184003E9D29 /* OrderViewController.swift */,
 				F4BF51A51EC5EFA0008C1A43 /* MappingViewController.swift */,
 				F408F5871EC60804001671AE /* MappinForExecutorViewController.swift */,
+				F46F05F81EC63C9E00F3B720 /* WorkOrderViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 			children = (
 				F401349B1EBF6FDD00799C26 /* MyOrdersViewCell.swift */,
 				F44105581EC104A400A8C8D9 /* SearchTableViewCell.swift */,
+				F46F05F61EC62E5200F3B720 /* WorkTableViewCell.swift */,
 			);
 			name = Cells;
 			path = ..;
@@ -381,12 +387,14 @@
 				F4BF51A61EC5EFA0008C1A43 /* MappingViewController.swift in Sources */,
 				F4D12A9F1EB6866900B549BF /* MaskFieldBlock.swift in Sources */,
 				AB4B169C1EC52184003E9D29 /* OrderViewController.swift in Sources */,
+				F46F05F71EC62E5200F3B720 /* WorkTableViewCell.swift in Sources */,
 				F408F5881EC60804001671AE /* MappinForExecutorViewController.swift in Sources */,
 				F441055B1EC1072700A8C8D9 /* SearchTableViewController.swift in Sources */,
 				F42A08ED1EB689A9009A5714 /* MaskFieldUtility.swift in Sources */,
 				F42A08E51EB688C8009A5714 /* MaskFieldBrackets.swift in Sources */,
 				F41660771EB0E21A008EC75D /* ProfileController.swift in Sources */,
 				AB46D2E81EC123E900452979 /* OrderListModel.swift in Sources */,
+				F46F05F91EC63C9E00F3B720 /* WorkOrderViewController.swift in Sources */,
 				F4D12A9D1EB6857400B549BF /* MaskField.swift in Sources */,
 				F44105591EC104A400A8C8D9 /* SearchTableViewCell.swift in Sources */,
 				3F875B511EC34DDE004568E8 /* SplashViewController.swift in Sources */,

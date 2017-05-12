@@ -1,5 +1,5 @@
 //
-//  WorkTableViewController.swift
+//  SearchTableViewController.swift
 //  WishMaker
 //
 //  Created by maxik on 08.05.17.
@@ -8,21 +8,32 @@
 
 import UIKit
 
-class WorkTableViewController: UITableViewController {
+class WorkTableViewController: UITableViewController, ModelProtocol {
     
+    //var tableData: Array<OrderModel>?
     
-    var canEdit = true
+    var tableData : NSArray = NSArray()
+    var selectedOrder = OrderModel()
     
-    var tableData = ["2","3","4"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "workCell")
-        
-        tableData.append("5")
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let token = appDelegate.authToken!
+        let uid = appDelegate.myId!
+        let url = "\(URLs.host)search_order?id_executor=eq.\(uid)"
+        let listModel = OrderListModel(uid, token: token, url: url)
+        listModel.delegate = self
+        listModel.downloadItems()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    func itemsDownloaded(items: NSArray) {
+        tableData = items
         self.tableView.reloadData()
-        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -30,37 +41,35 @@ class WorkTableViewController: UITableViewController {
     }
     
     
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "workCell")! as UITableViewCell
-        cell.textLabel?.text = self.tableData[indexPath.row]
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "searchCell")! as! SearchTableViewCell
+        let order = tableData[indexPath.row] as! OrderModel
+        cell.rootOrder = order
+        cell.title?.text = order.title!
+        cell.address?.text = order.address!
+        cell.price?.text = "\(order.price!)"
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return canEdit
-    }
-    
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if (editingStyle == UITableViewCellEditingStyle.delete) {
-            tableData.remove(at: indexPath.row)
-            self.tableView.reloadData()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier  == "infoOrder"  {
+            if let infoOrderVC = segue.destination as? OrderViewController {
+                let path = self.tableView.indexPathForSelectedRow
+                let cell: SearchTableViewCell = self.tableView.cellForRow(at: path!) as! SearchTableViewCell
+                infoOrderVC.order = cell.rootOrder
+            }
+        }
+        else {
+            print ("\n\n\n\n\n\n ERROOOOOOOOOOOOOOOOR \n\n\n\n\n")
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        _ = self.tableView.indexPathForSelectedRow!
+        if let _ = self.tableView.cellForRow(at: indexPath) {
+            self.performSegue(withIdentifier: "infoOrder", sender: self)
+        }
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }

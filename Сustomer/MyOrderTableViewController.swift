@@ -36,7 +36,7 @@ class MyOrderTableViewController: UITableViewController {
         cell.title.text = self.orders?[indexPath.row].title
         cell.checking.isEnabled = (self.orders?[indexPath.row].IsEnabled())!
         if (cell.checking.isEnabled) {
-            cell.checking.borderColor = .red
+            cell.checking.borderColor = UIColor.init(red: 68, green: 255, blue: 74, alpha: 1)
         }
         
         return cell
