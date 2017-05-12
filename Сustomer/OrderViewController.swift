@@ -31,7 +31,7 @@ class OrderViewController: UIViewController, FullOrderProtocol {
     self.descField.text = order.desc
     self.addressLabel.text = order.address
     self.priceLabel.text = String(describing: order.price!)
-    self.customerButton.titleLabel?.text = order.customerName
+    self.customerButton.setTitle(order.customerName, for: .normal)
   }
   
     override func viewDidLoad() {

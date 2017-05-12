@@ -20,6 +20,7 @@
 		AB4B169C1EC52184003E9D29 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4B169B1EC52184003E9D29 /* OrderViewController.swift */; };
 		ABD89ECA1EBF3CEB009C4061 /* AlertsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD89EC91EBF3CEB009C4061 /* AlertsFile.swift */; };
 		F401349C1EBF6FDD00799C26 /* MyOrdersViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F401349B1EBF6FDD00799C26 /* MyOrdersViewCell.swift */; };
+		F408F5881EC60804001671AE /* MappinForExecutorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F408F5871EC60804001671AE /* MappinForExecutorViewController.swift */; };
 		F41660721EB0E0FB008EC75D /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41660711EB0E0FB008EC75D /* RegistrationController.swift */; };
 		F41660741EB0E187008EC75D /* AuthorizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41660731EB0E187008EC75D /* AuthorizationController.swift */; };
 		F41660771EB0E21A008EC75D /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41660761EB0E21A008EC75D /* ProfileController.swift */; };
@@ -34,6 +35,9 @@
 		F441055B1EC1072700A8C8D9 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F441055A1EC1072700A8C8D9 /* SearchTableViewController.swift */; };
 		F441055D1EC1097800A8C8D9 /* CustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F441055C1EC1097800A8C8D9 /* CustomerViewController.swift */; };
 		F4742B401EC113D900E3EB0D /* AllButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4742B3F1EC113D900E3EB0D /* AllButtons.swift */; };
+		F4BF51A61EC5EFA0008C1A43 /* MappingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BF51A51EC5EFA0008C1A43 /* MappingViewController.swift */; };
+		F4BF51A81EC5EFC1008C1A43 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4BF51A71EC5EFC1008C1A43 /* CoreLocation.framework */; };
+		F4BF51AA1EC5EFC8008C1A43 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4BF51A91EC5EFC8008C1A43 /* MapKit.framework */; };
 		F4D12A9D1EB6857400B549BF /* MaskField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D12A9C1EB6857400B549BF /* MaskField.swift */; };
 		F4D12A9F1EB6866900B549BF /* MaskFieldBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D12A9E1EB6866900B549BF /* MaskFieldBlock.swift */; };
 		F4D12AA21EB6870D00B549BF /* MaskFieldBlockCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D12AA11EB6870D00B549BF /* MaskFieldBlockCharacter.swift */; };
@@ -61,6 +65,7 @@
 		ABD89EC91EBF3CEB009C4061 /* AlertsFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertsFile.swift; sourceTree = "<group>"; };
 		AC29EDD8DA5C69581103D15F /* Pods-WishMaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WishMaker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WishMaker/Pods-WishMaker.debug.xcconfig"; sourceTree = "<group>"; };
 		F401349B1EBF6FDD00799C26 /* MyOrdersViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyOrdersViewCell.swift; path = "Сustomer/MyOrdersViewCell.swift"; sourceTree = "<group>"; };
+		F408F5871EC60804001671AE /* MappinForExecutorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappinForExecutorViewController.swift; sourceTree = "<group>"; };
 		F41660711EB0E0FB008EC75D /* RegistrationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		F41660731EB0E187008EC75D /* AuthorizationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationController.swift; sourceTree = "<group>"; };
 		F41660761EB0E21A008EC75D /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
@@ -75,6 +80,9 @@
 		F441055A1EC1072700A8C8D9 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchTableViewController.swift; path = "Сustomer/SearchTableViewController.swift"; sourceTree = "<group>"; };
 		F441055C1EC1097800A8C8D9 /* CustomerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerViewController.swift; sourceTree = "<group>"; };
 		F4742B3F1EC113D900E3EB0D /* AllButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllButtons.swift; sourceTree = "<group>"; };
+		F4BF51A51EC5EFA0008C1A43 /* MappingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappingViewController.swift; sourceTree = "<group>"; };
+		F4BF51A71EC5EFC1008C1A43 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F4BF51A91EC5EFC8008C1A43 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F4D12A9C1EB6857400B549BF /* MaskField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskField.swift; sourceTree = "<group>"; };
 		F4D12A9E1EB6866900B549BF /* MaskFieldBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskFieldBlock.swift; sourceTree = "<group>"; };
 		F4D12AA01EB686C900B549BF /* MaskField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskField.h; sourceTree = "<group>"; };
@@ -94,6 +102,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4BF51AA1EC5EFC8008C1A43 /* MapKit.framework in Frameworks */,
+				F4BF51A81EC5EFC1008C1A43 /* CoreLocation.framework in Frameworks */,
 				347B5D0E084EC544F7CF747C /* Pods_WishMaker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +114,8 @@
 		2154788F9A3B78F1A7BD1870 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F4BF51A91EC5EFC8008C1A43 /* MapKit.framework */,
+				F4BF51A71EC5EFC1008C1A43 /* CoreLocation.framework */,
 				7C8384A466DFB2BF1DCDC635 /* Pods_WishMaker.framework */,
 			);
 			name = Frameworks;
@@ -151,6 +163,8 @@
 				3F875B501EC34DDE004568E8 /* SplashViewController.swift */,
 				F4FCF2671EC4DCA600367CE8 /* LaunchViewController.swift */,
 				AB4B169B1EC52184003E9D29 /* OrderViewController.swift */,
+				F4BF51A51EC5EFA0008C1A43 /* MappingViewController.swift */,
+				F408F5871EC60804001671AE /* MappinForExecutorViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -224,7 +238,6 @@
 				F4DEED6E1EACE2B100899DE2 /* Main.storyboard */,
 				F4DEED711EACE2B100899DE2 /* Assets.xcassets */,
 				F4DEED731EACE2B100899DE2 /* LaunchScreen.storyboard */,
-				F4DEED761EACE2B100899DE2 /* Info.plist */,
 			);
 			name = WishMaker;
 			path = "Сustomer";
@@ -233,6 +246,7 @@
 		F4F70FC21EC0C1E4005D3CF2 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				F4DEED761EACE2B100899DE2 /* Info.plist */,
 				F4F70FC31EC0C1F5005D3CF2 /* wareaglei.ttf */,
 				F4742B3F1EC113D900E3EB0D /* AllButtons.swift */,
 			);
@@ -364,8 +378,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F441055D1EC1097800A8C8D9 /* CustomerViewController.swift in Sources */,
+				F4BF51A61EC5EFA0008C1A43 /* MappingViewController.swift in Sources */,
 				F4D12A9F1EB6866900B549BF /* MaskFieldBlock.swift in Sources */,
 				AB4B169C1EC52184003E9D29 /* OrderViewController.swift in Sources */,
+				F408F5881EC60804001671AE /* MappinForExecutorViewController.swift in Sources */,
 				F441055B1EC1072700A8C8D9 /* SearchTableViewController.swift in Sources */,
 				F42A08ED1EB689A9009A5714 /* MaskFieldUtility.swift in Sources */,
 				F42A08E51EB688C8009A5714 /* MaskFieldBrackets.swift in Sources */,
