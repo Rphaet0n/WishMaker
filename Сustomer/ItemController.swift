@@ -24,6 +24,9 @@ class ItemController: UIViewController {
   
   @IBOutlet weak var descField: UITextView!
   @IBOutlet weak var titleField: UITextField!
+  var latitude:String?
+  var longtitude:String?
+  
   let order = OrderModel()
 
   
@@ -59,6 +62,8 @@ class ItemController: UIViewController {
     //correct
     //let desc = "asdasdaasd"
     
+    print("\(self.longtitude) \(self.latitude)")
+    
     guard let title = titleField.text,
       let address = addressField.text,
       let desc = descField.text,
@@ -73,13 +78,15 @@ class ItemController: UIViewController {
     self.order.desc =  desc
     self.order.price = price
     self.order.address = address
+    self.order.longtitude = self.longtitude
+    self.order.latitude = self.latitude
+
     //lat long id
     self.addOrder()
     
   }
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     
     // Do any additional setup after loading the view.
   }
@@ -89,6 +96,17 @@ class ItemController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier  == "attachLocationSegue"  {
+      if let mapVC = segue.destination as? MappingViewController {
+        mapVC.delegate = self
+      }
+    }
+    else {
+      print ("\n\n\n\n\n\n ERROOOOOOOOOOOOOOOOR \n\n\n\n\n")
+    }
+  }
   
   /*
    // MARK: - Navigation

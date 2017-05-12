@@ -17,10 +17,12 @@ class MappinForExecutorViewController: UIViewController, CLLocationManagerDelega
     var myPosition = CLLocationCoordinate2D()
     
     // For you Ahper jan
-    
+  var longt: Double = 0
+  var lat: Double = 0
     var destinationCoordinate = CLLocationCoordinate2D()
     var destination =  MKMapItem()
-    
+  
+  
     @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
@@ -32,7 +34,7 @@ class MappinForExecutorViewController: UIViewController, CLLocationManagerDelega
         
         let annotation = MKPointAnnotation()
         
-        destinationCoordinate = CLLocationCoordinate2D(latitude: 47.21666, longitude: 39.62842)
+        destinationCoordinate = CLLocationCoordinate2D(latitude: lat, longitude: longt)
         
         annotation.coordinate = destinationCoordinate
         annotation.title = "HOME"

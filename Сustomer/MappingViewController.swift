@@ -14,10 +14,12 @@ class MappingViewController: UIViewController, CLLocationManagerDelegate {
 
     var locationManager = CLLocationManager()
     var myPosition = CLLocationCoordinate2D()
-    
+  
+  
+  weak var delegate : ItemController!
     // For you Ahper jan
     
-    var destinationCoordinate = CLLocationCoordinate2D()
+    public var destinationCoordinate = CLLocationCoordinate2D()
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -60,6 +62,8 @@ class MappingViewController: UIViewController, CLLocationManagerDelegate {
         annotation.subtitle = "Location of destination"
         
         destinationCoordinate = locCoord
+        delegate.longtitude = "\(destinationCoordinate.longitude)"
+      delegate.latitude = "\(destinationCoordinate.latitude)"
         
         print("\(destinationCoordinate.latitude) \(destinationCoordinate.longitude)" )
         

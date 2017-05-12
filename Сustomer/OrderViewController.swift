@@ -49,7 +49,23 @@ class OrderViewController: UIViewController, FullOrderProtocol {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+  
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "showLocationSegue" {
+      guard let lat = self.order.latitude,
+      let longt = self.order.longtitude,
+      let latcor = Double(lat),
+      let longtcor = Double(longt) else {
+        ShowAlert.notifyUser("Sorry", message: "Customer didn't attached location!", controller: self)
+        return
+      }
+      if let dest = segue.destination as? MappinForExecutorViewController {
+        dest.longt = longtcor
+        dest.lat = latcor
+      }
+    }
+  }
 
     /*
     // MARK: - Navigation
