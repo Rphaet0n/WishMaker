@@ -16,6 +16,8 @@ class SearchTableViewCell: UITableViewCell {
     
     @IBOutlet weak var address: UILabel!
     
+    var rootOrder : OrderModel?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

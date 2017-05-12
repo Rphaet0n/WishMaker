@@ -35,9 +35,13 @@ class OrderViewController: UIViewController, FullOrderProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-      let appDelegate = UIApplication.shared.delegate as! AppDelegate
-      let fullOrderModel = FullOrderModel(self.order!, token: appDelegate.authToken!)
-      fullOrderModel.downloadFullOrder()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let fullOrderModel = FullOrderModel(self.order!, token: appDelegate.authToken!)
+        fullOrderModel.downloadFullOrder()
+        self.titleLabel.text = order.title
+        self.descField.text = order.desc
+        self.addressLabel.text = order.address
+        self.priceLabel.text = String(describing: order.price!)
     }
 
     override func didReceiveMemoryWarning() {

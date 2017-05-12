@@ -43,24 +43,31 @@ class SearchTableViewController: UITableViewController, ModelProtocol {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "searchCell")! as! SearchTableViewCell
         let order = tableData[indexPath.row] as! OrderModel
+        cell.rootOrder = order
         cell.title?.text = order.title!
         cell.address?.text = order.address!
         cell.price?.text = "\(order.price!)"
         return cell
     }
   
-  override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-    selectedOrder = tableData[indexPath.row] as! OrderModel
-    // Manually call segue to detail view controller
-    self.performSegue(withIdentifier: "fullOrderSegue", sender: self)
-  }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier  == "infoOrder"  {
+            if let infoOrderVC = segue.destination as? OrderViewController {
+                let path = self.tableView.indexPathForSelectedRow
+                let cell: SearchTableViewCell = self.tableView.cellForRow(at: path!) as! SearchTableViewCell
+                infoOrderVC.order = cell.rootOrder
+            }
+        }
+        else {
+            print ("\n\n\n\n\n\n ERROOOOOOOOOOOOOOOOR \n\n\n\n\n")
+        }
+    }
   
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    let orderVC  = segue.destination as! OrderViewController
-    // Set the property to the selected location so when the view for
-    // detail view controller loads, it can access that property to get the feeditem obj
-    orderVC.order = selectedOrder
-  }
-  
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        _ = self.tableView.indexPathForSelectedRow!
+        if let _ = self.tableView.cellForRow(at: indexPath) {
+            self.performSegue(withIdentifier: "infoOrder", sender: self)
+        }
+    }
+    
 }
