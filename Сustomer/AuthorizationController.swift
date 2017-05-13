@@ -113,11 +113,23 @@ class AutorizationController: UIViewController {
       self.performSegue(withIdentifier: "singInSegue", sender: self)
     }
   }
+  
+  
+  //Calls this function when the tap is recognized.
+  func dismissKeyboard() {
+    //Causes the view (or one of its embedded text fields) to resign the first responder status.
+    view.endEditing(true)
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     passField.isSecureTextEntry = true
-    
+    //Looks for single or multiple taps.
+    let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+    //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+    //tap.cancelsTouchesInView = false
+    view.addGestureRecognizer(tap)
     
     let defaults = UserDefaults.standard
     guard let token = defaults.string(forKey: "authToken"),

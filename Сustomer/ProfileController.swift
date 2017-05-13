@@ -91,7 +91,13 @@ UINavigationControllerDelegate, ImageLoadProtocol {
       return
     }
     self.user = user
-    avatarView.image = user.avatar
+    self.user = user
+    if user.avatar != nil {
+      self.avatarView.image = user.avatar
+    }
+    else {
+      self.avatarView.image = #imageLiteral(resourceName: "default_profile")
+    }
     self.name.text = user.fullName
     self.rating.text = user.rating
     self.phone.text = user.mobileNo
@@ -143,6 +149,7 @@ UINavigationControllerDelegate, ImageLoadProtocol {
             appDelegate.authToken = nil
             appDelegate.userName = nil
             appDelegate.myId = nil
+          self.navigationController!.viewControllers.removeAll()
         }
     }
   
