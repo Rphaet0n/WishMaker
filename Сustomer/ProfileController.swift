@@ -132,5 +132,18 @@ UINavigationControllerDelegate, ImageLoadProtocol {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "signOutSegue" {
+            let defaults = UserDefaults.standard
+            defaults.set(nil, forKey: "authToken")
+            defaults.set(nil, forKey: "myId")
+            defaults.set(nil, forKey: "username")
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.authToken = nil
+            appDelegate.userName = nil
+            appDelegate.myId = nil
+        }
+    }
   
 }

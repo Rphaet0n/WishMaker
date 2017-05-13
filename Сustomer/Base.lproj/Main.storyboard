@@ -351,7 +351,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="9ky-5P-WPs" kind="show" id="BRR-91-2Og"/>
+                                    <segue destination="9ky-5P-WPs" kind="presentation" id="BRR-91-2Og"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkK-A5-Ja1" customClass="AllButtons" customModule="WishMaker" customModuleProvider="target">
@@ -389,7 +389,7 @@
                         <barButtonItem key="backBarButtonItem" title="Profile" id="Ot0-NM-6eC"/>
                         <barButtonItem key="leftBarButtonItem" title="Sign out" id="Pn1-Bt-R5t">
                             <connections>
-                                <segue destination="IWf-tj-fZK" kind="show" id="gSw-ED-vnV"/>
+                                <segue destination="IWf-tj-fZK" kind="showDetail" identifier="signOutSegue" action="showViewController:sender:" id="gSw-ED-vnV"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Search" id="WoK-F6-vMO">
@@ -1250,9 +1250,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="BhP-gq-LTH"/>
-        <segue reference="M2Q-WT-Vu8"/>
-        <segue reference="EgX-HT-jmA"/>
+        <segue reference="A1U-TC-T7F"/>
         <segue reference="NJO-Xr-fq1"/>
+        <segue reference="h7a-Vo-2vd"/>
         <segue reference="4sp-GL-Sx8"/>
     </inferredMetricsTieBreakers>
 </document>
