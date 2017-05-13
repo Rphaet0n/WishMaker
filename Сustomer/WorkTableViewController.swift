@@ -60,9 +60,6 @@ class WorkTableViewController: UITableViewController, ModelProtocol {
                 infoOrderVC.order = cell.rootOrder
             }
         }
-        else {
-            print ("\n\n\n\n\n\n ERROOOOOOOOOOOOOOOOR \n\n\n\n\n")
-        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

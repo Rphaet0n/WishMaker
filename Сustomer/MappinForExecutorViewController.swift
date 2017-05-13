@@ -57,7 +57,7 @@ class MappinForExecutorViewController: UIViewController, CLLocationManagerDelega
         locationManager.stopUpdatingLocation()
         
         let span = MKCoordinateSpanMake(0.05, 0.05)
-        let region = MKCoordinateRegion(center: myPosition, span: span)
+        let region = MKCoordinateRegion(center: destinationCoordinate, span: span)
         mapView.setRegion(region, animated: true)
         
     }
@@ -78,7 +78,7 @@ class MappinForExecutorViewController: UIViewController, CLLocationManagerDelega
             (response: MKDirectionsResponse?, error: Error?) in
             
             if error != nil {
-                print("Error \(error)")
+                ShowAlert.notifyUser("Far far away", message: "Cann't get directions", controller: self)
             } else {
                 
                 let overlays = self.mapView.overlays

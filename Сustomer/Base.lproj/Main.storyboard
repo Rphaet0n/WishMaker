@@ -301,7 +301,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_profile" translatesAutoresizingMaskIntoConstraints="NO" id="Iv0-Pe-kst">
-                                <rect key="frame" x="8" y="116" width="152" height="152"/>
+                                <rect key="frame" x="8" y="72" width="152" height="152"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Iv0-Pe-kst" secondAttribute="height" multiplier="1:1" id="2Lp-Pa-q8B"/>
                                     <constraint firstAttribute="height" constant="152" id="iHd-Xk-gay"/>
@@ -485,7 +485,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5ID-JX-CNu">
-                                <rect key="frame" x="20" y="397" width="375" height="94"/>
+                                <rect key="frame" x="20" y="397" width="375" height="136"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Qe0-o3-8jo">
@@ -496,7 +496,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4ys-Ve-p6a">
-                                        <rect key="frame" x="0.0" y="10" width="75" height="75"/>
+                                        <rect key="frame" x="0.0" y="31" width="75" height="75"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
@@ -512,7 +512,7 @@
                                         <size key="customSize" width="75" height="75"/>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ZqJ-FD-UMv">
-                                        <rect key="frame" x="85" y="10" width="75" height="75"/>
+                                        <rect key="frame" x="85" y="31" width="75" height="75"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
@@ -527,7 +527,7 @@
                                         <size key="customSize" width="75" height="75"/>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="VPE-iY-DaT">
-                                        <rect key="frame" x="170" y="10" width="75" height="75"/>
+                                        <rect key="frame" x="170" y="31" width="75" height="75"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
@@ -542,7 +542,7 @@
                                         <size key="customSize" width="75" height="75"/>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="dTR-VG-JCQ">
-                                        <rect key="frame" x="255" y="10" width="75" height="75"/>
+                                        <rect key="frame" x="255" y="31" width="75" height="75"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
@@ -878,7 +878,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gH9-oY-u9j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="595.6521739130435" y="124.72826086956523"/>
+            <point key="canvasLocation" x="799" y="561"/>
         </scene>
         <!--Launch View Controller-->
         <scene sceneID="gXt-nI-i34">
@@ -1249,10 +1249,10 @@
         <image name="default_profile" width="1000" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BhP-gq-LTH"/>
-        <segue reference="A1U-TC-T7F"/>
-        <segue reference="NJO-Xr-fq1"/>
         <segue reference="h7a-Vo-2vd"/>
+        <segue reference="VwU-Zf-kSM"/>
         <segue reference="4sp-GL-Sx8"/>
+        <segue reference="BhP-gq-LTH"/>
+        <segue reference="NJO-Xr-fq1"/>
     </inferredMetricsTieBreakers>
 </document>
