@@ -246,6 +246,9 @@
                                                     <real key="value" value="1"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="completeOrder:" destination="pro-C7-JQt" eventType="touchUpInside" id="fi6-Ok-ju1"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLf-z4-NQP">
                                             <rect key="frame" x="8" y="6" width="290" height="30"/>
@@ -483,7 +486,7 @@
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5ID-JX-CNu">
                                 <rect key="frame" x="20" y="397" width="375" height="94"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Qe0-o3-8jo">
                                     <size key="itemSize" width="50" height="50"/>
@@ -557,7 +560,7 @@
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fd3-cy-BZA" customClass="AllButtons" customModule="WishMaker" customModuleProvider="target">
                                 <rect key="frame" x="33" y="532" width="348" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="17"/>
                                 <state key="normal" title="Add in map">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -627,51 +630,6 @@
                 </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="363.768115942029" y="-1380.163043478261"/>
-        </scene>
-        <!--Customer-->
-        <scene sceneID="Jai-Nm-jRv">
-            <objects>
-                <viewController title="Customer" id="ri9-gj-OTO" customClass="CustomerViewController" customModule="WishMaker" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="T31-BI-F9W"/>
-                        <viewControllerLayoutGuide type="bottom" id="7LL-jc-GGm"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4FA-Ks-ZAj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default_profile" translatesAutoresizingMaskIntoConstraints="NO" id="p0y-sP-NCt">
-                                <rect key="frame" x="20" y="76" width="152" height="152"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bd-ov-dxO">
-                                <rect key="frame" x="180" y="76" width="214" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Telephone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4UJ-eb-goG">
-                                <rect key="frame" x="180" y="114" width="214" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Raiting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfj-FS-R0b">
-                                <rect key="frame" x="180" y="152" width="214" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.20392156859999999" green="0.65490196079999996" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="s5M-hV-skW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="596" y="-573"/>
         </scene>
         <!--All orders-->
         <scene sceneID="UwJ-VH-2yd">
@@ -791,7 +749,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="ri9-gj-OTO" kind="showDetail" action="showViewController:sender:" id="FK0-9c-fz9"/>
+                                    <segue destination="KfM-Q5-KyW" kind="show" identifier="fromSearchProfileSegue" id="NJO-Xr-fq1"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wzc-8a-uXR">
@@ -952,10 +910,10 @@
             </objects>
             <point key="canvasLocation" x="-5110.144927536232" y="-763.04347826086962"/>
         </scene>
-        <!--CustomerForMe-->
+        <!--Customer-->
         <scene sceneID="DMQ-DR-QlD">
             <objects>
-                <viewController title="CustomerForMe" id="KfM-Q5-KyW" customClass="CustomerViewController" customModule="WishMaker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Customer" id="KfM-Q5-KyW" customClass="CustomerViewController" customModule="WishMaker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8Vg-yt-qpF"/>
                         <viewControllerLayoutGuide type="bottom" id="ttP-0C-ZuD"/>
@@ -992,10 +950,16 @@
                         </subviews>
                         <color key="backgroundColor" red="0.20392156859999999" green="0.65490196079999996" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="avatarView" destination="4aK-hs-aA3" id="4zz-Oi-9Q2"/>
+                        <outlet property="name" destination="Btc-in-Eqs" id="JGr-Mk-P9V"/>
+                        <outlet property="phone" destination="9kx-CF-m0U" id="b3l-iH-fgS"/>
+                        <outlet property="rating" destination="m1B-ld-CQa" id="jfs-Dw-eAb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bf5-aR-Csc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="971.01449275362324" y="1047.554347826087"/>
+            <point key="canvasLocation" x="1916" y="298"/>
         </scene>
         <!--My Work-->
         <scene sceneID="hym-jw-Wqb">
@@ -1124,7 +1088,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="KfM-Q5-KyW" kind="showDetail" id="IGW-Sw-jp3">
+                                    <segue destination="KfM-Q5-KyW" kind="show" identifier="fromWorkProfileSegue" id="IGW-Sw-jp3">
                                         <nil key="action"/>
                                     </segue>
                                 </connections>
@@ -1286,8 +1250,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="BhP-gq-LTH"/>
-        <segue reference="VwU-Zf-kSM"/>
-        <segue reference="BRR-91-2Og"/>
-        <segue reference="h7a-Vo-2vd"/>
+        <segue reference="M2Q-WT-Vu8"/>
+        <segue reference="EgX-HT-jmA"/>
+        <segue reference="NJO-Xr-fq1"/>
+        <segue reference="4sp-GL-Sx8"/>
     </inferredMetricsTieBreakers>
 </document>

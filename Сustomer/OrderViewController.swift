@@ -72,7 +72,11 @@ class OrderViewController: UIViewController, FullOrderProtocol {
       guard isAgreed! else {
         ShowAlert.notifyUser("Error", message: "Couldn't cancel order!", controller: self)
         return
-      }
+        }
+    } else if segue.identifier == "fromSearchProfileSegue" {
+        if let profVC = segue.destination as? CustomerViewController {
+            profVC.userId = order.idCustomer!
+        }
     }
   }
 

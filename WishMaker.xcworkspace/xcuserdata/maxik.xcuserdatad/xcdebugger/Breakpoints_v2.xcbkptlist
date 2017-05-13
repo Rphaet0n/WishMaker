@@ -35,5 +35,176 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x421;ustomer/MyOrderTableViewController.swift"
+            timestampString = "516325441.515891"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "MyOrderTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WishMaker.MyOrderTableViewController.__deallocating_deinit"
+                  moduleName = "WishMaker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maxik/Desktop/WishMaker/%D0%A1ustomer/MyOrderTableViewController.swift"
+                  timestampString = "516325442.413038"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WishMaker.MyOrderTableViewController.init (style : __C.UITableViewStyle) -&gt; WishMaker.MyOrderTableViewController"
+                  moduleName = "WishMaker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maxik/Desktop/WishMaker/%D0%A1ustomer/MyOrderTableViewController.swift"
+                  timestampString = "516325442.414749"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WishMaker.MyOrderTableViewController.__allocating_init (style : __C.UITableViewStyle) -&gt; WishMaker.MyOrderTableViewController"
+                  moduleName = "WishMaker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maxik/Desktop/WishMaker/%D0%A1ustomer/MyOrderTableViewController.swift"
+                  timestampString = "516325442.416489"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WishMaker.MyOrderTableViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; WishMaker.MyOrderTableViewController"
+                  moduleName = "WishMaker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maxik/Desktop/WishMaker/%D0%A1ustomer/MyOrderTableViewController.swift"
+                  timestampString = "516325442.418127"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WishMaker.MyOrderTableViewController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; WishMaker.MyOrderTableViewController"
+                  moduleName = "WishMaker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maxik/Desktop/WishMaker/%D0%A1ustomer/MyOrderTableViewController.swift"
+                  timestampString = "516325442.419728"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WishMaker.MyOrderTableViewController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;WishMaker.MyOrderTableViewController&gt;"
+                  moduleName = "WishMaker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maxik/Desktop/WishMaker/%D0%A1ustomer/MyOrderTableViewController.swift"
+                  timestampString = "516325442.421314"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WishMaker.MyOrderTableViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;WishMaker.MyOrderTableViewController&gt;"
+                  moduleName = "WishMaker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maxik/Desktop/WishMaker/%D0%A1ustomer/MyOrderTableViewController.swift"
+                  timestampString = "516325442.422907"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x421;ustomer/FullOrderModel.swift"
+            timestampString = "516328718.952681"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "downloadFullOrder()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WishMaker.FullOrderModel.(downloadFullOrder () -&gt; ()).(closure #1)"
+                  moduleName = "WishMaker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maxik/Desktop/WishMaker/%D0%A1ustomer/FullOrderModel.swift"
+                  timestampString = "516328719.167315"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "8390">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WishMaker.FullOrderModel.(downloadFullOrder () -&gt; ()).(closure #1)"
+                  moduleName = "WishMaker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maxik/Desktop/WishMaker/%D0%A1ustomer/FullOrderModel.swift"
+                  timestampString = "516328719.169085"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "9204">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

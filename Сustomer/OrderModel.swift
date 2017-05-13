@@ -39,6 +39,7 @@ class OrderModel: NSObject {
   var idOrder: Int?
   var status: String?
   var customerName: String?
+    var idCustomer: Int?
   
   //empty constructor
   override init()

@@ -59,7 +59,7 @@ class SearchTableViewController: UITableViewController, ModelProtocol {
             }
         }
         else {
-            print ("\n\n\n\n\n\n ERROOOOOOOOOOOOOOOOR \n\n\n\n\n")
+            print ("\nError\n")
         }
     }
   

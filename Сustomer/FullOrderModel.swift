@@ -67,6 +67,7 @@ class FullOrderModel: NSObject{
         self.order.latitude = dic["latitude"]?.string
         self.order.longtitude = dic["longtitude"]?.string
         self.order.customerName = dic["full_name"]?.string
+        self.order.idCustomer = dic["id_customer"]?.int
 
         if let endDate = dic["end_date"]?.string {
           self.order.endDate =  ImageConverter.parseDate(endDate)
@@ -143,4 +144,33 @@ class FullOrderModel: NSObject{
     semaphore.wait(timeout: .now() + 3.0)
     return result
   }
+    
+    func completeOrder(_ uid: Int) -> Bool {
+        var result = false
+        let headers: HTTPHeaders = ["Accept":"application/json","Authorization":token]
+        let acceptURL = "\(URLs.host)rpc/completeorder"
+        let params : Parameters =
+            ["id_user":uid, "id_order":self.order.idOrder!, "mark": 10]
+        let semaphore = DispatchSemaphore(value: 0)
+        let utilityQueue = DispatchQueue.global(qos: .utility)
+        Alamofire.request(URL(string: acceptURL)!, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
+            .responseJSON(queue: utilityQueue) { response in
+                debugPrint("answer####: \(response) ####end answer")
+                let statusCode: Int? = response.response?.statusCode
+                guard response.result.isSuccess, statusCode! < 300 else {
+                    if (statusCode != nil){
+                        debugPrint("Status code: \(statusCode) \nError while fetching remote rooms: \(response.result.error)")
+                    } else{
+                        //self.notifyUser("Connection error", message: "Server down or internet connection is bad")
+                    }
+                    result = false
+                    semaphore.signal()
+                    return
+                }
+                result = true
+                semaphore.signal()
+        }
+        semaphore.wait(timeout: .now() + 3.0)
+        return result
+    }
 }

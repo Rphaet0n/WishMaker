@@ -82,6 +82,10 @@ class WorkOrderViewController: UIViewController, FullOrderProtocol {
                 ShowAlert.notifyUser("Error", message: "Couldn't cancel order!", controller: self)
                 return
             }
+        } else if segue.identifier == "fromWorkProfileSegue" {
+            if let profVC = segue.destination as? CustomerViewController {
+                profVC.userId = order.idCustomer!
+            }
         }
         
     }

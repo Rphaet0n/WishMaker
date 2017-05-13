@@ -8,13 +8,12 @@
 
 import UIKit
 
-class MyOrderTableViewController: UITableViewController, ModelProtocol {
+class MyOrderTableViewController: UITableViewController, ModelProtocol, FullOrderProtocol {
   
   //var tableData: Array<OrderModel>?
   
   var tableData : Array<OrderModel> = Array<OrderModel> ()
   var selectedOrder = OrderModel()
-  
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -26,7 +25,24 @@ class MyOrderTableViewController: UITableViewController, ModelProtocol {
     listModel.delegate = self
     listModel.downloadItems()
   }
-  
+    
+    func orderLoaded(order: OrderModel){
+        
+    }
+
+    
+    func completeOrder(_ ind: Int) -> Bool  {
+        let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
+        let token = appDelegate.authToken!
+        let fullModel = FullOrderModel(tableData[ind], token: token)
+        fullModel.delegate = self
+        guard fullModel.completeOrder(appDelegate.myId!) else {
+            ShowAlert.notifyUser("Error", message: "Can't complete order!", controller: self)
+            return false
+        }
+        return true
+    }
+    
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }
@@ -49,6 +65,9 @@ class MyOrderTableViewController: UITableViewController, ModelProtocol {
     if cell.checking.isEnabled {
       cell.checking.borderColor = .green
     }
+    cell.delegate = self
+    cell.ind = indexPath.row
+    cell.checking.isHidden = order.status! == OrderStatus.done.rawValue
     return cell
   }
   

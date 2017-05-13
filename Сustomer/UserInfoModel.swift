@@ -26,7 +26,7 @@ class UserInfoModel: NSObject{
   let uid: Int
   let users = NSMutableArray()
   
-  init(_ uid: Int, token: String){
+    init(_ uid: Int, token: String){
     self.path = "\(URLs.host)user_infos?id_user=eq.\(uid)"
     self.token = token
     self.uid = uid

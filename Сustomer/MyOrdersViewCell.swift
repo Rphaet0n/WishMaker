@@ -12,6 +12,13 @@ class MyOrdersViewCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var checking: AllButtons!
     
+    var delegate: MyOrderTableViewController!
+    var ind: Int!
+    
+    @IBAction func completeOrder(_ sender: Any) {
+        self.checking.isHidden = self.delegate.completeOrder(ind)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
