@@ -28,7 +28,7 @@ class RegistrationController: UIViewController {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     //Looks for single or multiple taps.
-    let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+    let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(RegistrationController.dismissKeyboard))
     //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
     //tap.cancelsTouchesInView = false
     view.addGestureRecognizer(tap)

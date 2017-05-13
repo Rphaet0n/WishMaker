@@ -44,7 +44,7 @@ public class AuthHelper {
                 result = true
                 semaphore.signal()
         }
-        semaphore.wait(timeout: .now() + 3.0)
+        let _ = semaphore.wait(timeout: .now() + 3.0)
         return result
     }
     
@@ -66,7 +66,7 @@ public class AuthHelper {
             .responseJSON(queue: utilityQueue) { response in
                 debugPrint("answer####: \(response) ####end answer")
                 let statusCode: Int? = response.response?.statusCode
-                guard response.result.isSuccess, statusCode == 200, let value = response.result.value else {
+                guard response.result.isSuccess, statusCode == 200, let _ = response.result.value else {
                     if (statusCode != nil){
                         switch statusCode! {
                         case 409:  ShowAlert.notifyUser("Error", message: "Username is busy, try another!", controller: controller)
@@ -82,7 +82,7 @@ public class AuthHelper {
                 semaphore.signal()
         }
         
-        semaphore.wait(timeout: .now() + 3.0)
+        let _ = semaphore.wait(timeout: .now() + 3.0)
         
         if !regCompleted {
             ShowAlert.notifyUser("Error", message: "Try again later!", controller: controller)
@@ -113,7 +113,7 @@ public class AuthHelper {
                 semaphore.signal()
         }
         
-        semaphore.wait(timeout: .now() + 3.0)
+        let _ = semaphore.wait(timeout: .now() + 3.0)
         
         if token == nil {
             ShowAlert.notifyUser("Error", message: "Token receivng fail!", controller: controller)
@@ -151,7 +151,7 @@ public class AuthHelper {
                 semaphore.signal()
         }
         
-        semaphore.wait(timeout: .now() + 3.0)
+        let _ = semaphore.wait(timeout: .now() + 3.0)
         
         if !regCompleted {
             ShowAlert.notifyUser("Error", message: "Can't add fullname and phone number!", controller: controller)

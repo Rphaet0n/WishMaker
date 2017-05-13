@@ -40,7 +40,7 @@ class MappinForExecutorViewController: UIViewController, CLLocationManagerDelega
         annotation.title = "HOME"
         annotation.subtitle = "Location of destination"
         self.mapView.addAnnotation(annotation)
-        var allAnnotations = mapView.annotations
+        _ = mapView.annotations
         
     }
     

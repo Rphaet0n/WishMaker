@@ -12,7 +12,7 @@ class LaunchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let timer = Timer.scheduledTimer(timeInterval: 2.0,target:self,selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
+        _ = Timer.scheduledTimer(timeInterval: 2.0,target:self,selector: #selector(timeToMoveOn), userInfo: nil, repeats: false)
 
         // Do any additional setup after loading the view.
     }

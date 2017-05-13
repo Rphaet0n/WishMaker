@@ -112,7 +112,7 @@ class FullOrderModel: NSObject{
         result = true
         semaphore.signal() 
     }
-    semaphore.wait(timeout: .now() + 3.0)
+    let _ = semaphore.wait(timeout: .now() + 3.0)
     return result
   }
   
@@ -141,7 +141,7 @@ class FullOrderModel: NSObject{
         result = true
         semaphore.signal()
     }
-    semaphore.wait(timeout: .now() + 3.0)
+    let _ = semaphore.wait(timeout: .now() + 3.0)
     return result
   }
     
@@ -170,7 +170,7 @@ class FullOrderModel: NSObject{
                 result = true
                 semaphore.signal()
         }
-        semaphore.wait(timeout: .now() + 3.0)
+        let _ = semaphore.wait(timeout: .now() + 3.0)
         return result
     }
 }
