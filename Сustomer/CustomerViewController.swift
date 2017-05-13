@@ -36,8 +36,16 @@ class CustomerViewController: UIViewController, ImageLoadProtocol {
             debugPrint("Cant cast to UserModel !")
             return
         }
-        self.user = user
-        avatarView.image = user.avatar
+      self.user = user
+      self.avatarView.image = user.avatar ?? #imageLiteral(resourceName: "default_profile")
+      /*
+      if user.avatar != nil {
+        self.avatarView.image = user.avatar
+      }
+      else {
+        self.avatarView.image = #imageLiteral(resourceName: "default_profile")
+      }
+ */
         self.name.text = user.fullName
         self.rating.text = user.rating
         self.phone.text = user.mobileNo

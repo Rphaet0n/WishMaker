@@ -91,7 +91,6 @@ UINavigationControllerDelegate, ImageLoadProtocol {
       return
     }
     self.user = user
-    self.user = user
     if user.avatar != nil {
       self.avatarView.image = user.avatar
     }
